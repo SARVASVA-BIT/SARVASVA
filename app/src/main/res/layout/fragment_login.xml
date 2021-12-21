@@ -9,16 +9,15 @@
     tools:context=".app.fragments.LoginFragment">
 
 
-
-
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="227dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="16dp"
         android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/emailEt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,7 +25,7 @@
         android:id="@+id/emailEt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-android:layout_marginLeft="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:hint="Email Id"
         android:textColor="@color/white"
@@ -123,15 +122,17 @@ android:layout_marginLeft="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="@color/black"
+
+
         android:text="Sign Up"
+        android:textAlignment="center"
+
         android:textColor="@color/white"
-
-
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-      android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/OrTv" />
 
@@ -164,6 +165,7 @@ android:layout_marginLeft="16dp"
         android:layout_height="40dp"
         android:layout_marginTop="4dp"
         android:elevation="4dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
