@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.sarvasva.R;
+import com.google.firebase.auth.FirebaseAuth;
 //import com.google.firebase.auth.FirebaseAuth;
 
 
@@ -38,14 +39,14 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 // todo: check if user is already logged in or not
 
-//                FirebaseAuth auth = FirebaseAuth.getInstance();
-//                if (auth.getCurrentUser() == null)
-//                {
-//                    Intent mainIntent = new Intent(SplashActivity.this,AuthenticationActivity.class);
-//                    startActivity(mainIntent);
-//                    finish();
-//                }
-//                else
+             FirebaseAuth auth = FirebaseAuth.getInstance();
+               if (auth.getCurrentUser() == null)
+               {
+                  Intent mainIntent = new Intent(SplashActivity.this,AuthenticationActivity.class);
+                   startActivity(mainIntent);
+                   finish();
+               }
+                else
                {
                     Intent mainIntent = new Intent(SplashActivity.this, AuthenticationActivity.class);
                     startActivity(mainIntent);

@@ -15,7 +15,7 @@ import com.example.sarvasva.app.fragments.LoginFragment;
 public class AuthenticationActivity extends AppCompatActivity {
 
     private FrameLayout frameLayout;
-public static boolean isLoginFragment;
+    public static boolean isLoginFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +23,7 @@ public static boolean isLoginFragment;
         frameLayout = findViewById(R.id.frameLayoutAuth);
 
         setDefaultFragment(new LoginFragment());
-isLoginFragment =true;
+         isLoginFragment =true;
     }
 
     private void setDefaultFragment(Fragment fragment)

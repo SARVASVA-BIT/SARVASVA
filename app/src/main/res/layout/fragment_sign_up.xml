@@ -8,7 +8,7 @@
 
     tools:context=".app.fragments.SignUpFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
 
     <ImageView
         android:id="@+id/logo"
@@ -43,7 +43,7 @@ android:layout_marginLeft="16dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Email Id "
+        android:hint="Enter College Email Id "
         android:textColor="@color/white"
         android:inputType="textEmailAddress"
         android:textColorHint="@color/white"

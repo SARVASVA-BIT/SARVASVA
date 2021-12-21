@@ -25,6 +25,11 @@ import android.widget.Toast;
 ;
 import com.example.sarvasva.R;
 import com.example.sarvasva.app.activities.MainActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 //import com.google.android.gms.tasks.OnCompleteListener;
 //import com.google.android.gms.tasks.Task;
 //import com.google.firebase.auth.AuthResult;
@@ -48,9 +53,9 @@ public class SignUpFragment extends Fragment {
     private FrameLayout parentFrameLayout;
     private ProgressBar progressBar;
 
-//    private FirebaseAuth fireBaseAuth;
-//    private FirebaseFirestore firestore;
-    private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    private FirebaseAuth fireBaseAuth;
+    private FirebaseFirestore firestore;
+    private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+\\.+[a-z]+";
 
 
 
@@ -91,9 +96,9 @@ public class SignUpFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         parentFrameLayout = getActivity().findViewById(R.id.frameLayoutAuth);
-//
-//        fireBaseAuth = FirebaseAuth.getInstance();
-//        firestore = FirebaseFirestore.getInstance();
+
+        fireBaseAuth = FirebaseAuth.getInstance();
+        firestore = FirebaseFirestore.getInstance();
 
         fullNameEt.addTextChangedListener(new TextWatcher() {
             @Override
@@ -175,152 +180,107 @@ public class SignUpFragment extends Fragment {
 
             }
         });
-//
-//        signUpButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(emailEt.getText().toString().matches(emailPattern))
-//                {
-//                    if (passwordEt.getText().toString().equals(cnfPassEt.getText().toString()))
-//                    {
-//                        // ready to authenticate;
-//                        signUpButton.setEnabled(false);
-//                        progressBar.setVisibility(View.VISIBLE);
-//                        signUpButton.setText("");
-//
-//                        String email = emailEt.getText().toString();
-//                        String password = passwordEt.getText().toString();
-//                        fireBaseAuth.createUserWithEmailAndPassword(email , password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                            @Override
-//                            public void onComplete(@NonNull Task<AuthResult> task) {
-//                                if (task.isSuccessful())
-//                                {
-//                                    fireBaseAuth.signInWithEmailAndPassword(email , password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                                        @Override
-//                                        public void onComplete(@NonNull Task<AuthResult> task) {
-//                                            if (task.isSuccessful()) {
-//
-//                                                // date -- firebase
-//                                                Map<String , Object> basicDetails = new HashMap<>();
-//                                                basicDetails.put("full name", fullNameEt.getText().toString());
-//                                                basicDetails.put("mobile_no", mobileEt.getText().toString());
-//                                                basicDetails.put("email", emailEt.getText().toString());
-//
-//
-//                                                firestore.collection("USERS").document(fireBaseAuth.getUid())
-//                                                        .set(basicDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
-//                                                    @Override
-//                                                    public void onComplete(@NonNull Task<Void> task) {
-//                                                        if (task.isSuccessful()) {
-//
-//
-//                                                            CollectionReference userDataReference = firestore.collection("USERS").document(fireBaseAuth.getUid()).collection("USER_DATA");
-//                                                            List<String> documentNames = new ArrayList<>();
-//                                                            documentNames.add("MY_RATINGS");
-//                                                            documentNames.add("MY_COURSES");
-//                                                            documentNames.add("MY_TESTS");
-//                                                            documentNames.add("MY_NOTES");
-//
-//                                                            Map<String , Long> totalMap = new HashMap<>();
-//                                                            totalMap.put("total " , 0L );
-//                                                            // or we can write (long ) 0
-//
-//
-//
-//
-//
-//
-//                                                            for (int i=0 ; i<documentNames.size() ; i++)
-//                                                            {
-//
-//                                                                userDataReference.document(documentNames.get(i)).set(totalMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-//                                                                    @Override
-//                                                                    public void onComplete(@NonNull Task<Void> task) {
-//                                                                        if (task.isSuccessful())
-//                                                                        {
-//
-//
-//                                                                            Intent intent = new Intent(getContext(), MainActivity.class);
-//                                                                            Toast.makeText(getContext(), "Logged In!", Toast.LENGTH_SHORT).show();
-//                                                                            startActivity(intent);
-//                                                                            getActivity().finish();
-//
-//                                                                        }
-//                                                                        else
-//                                                                        {
-//                                                                            fireBaseAuth.signOut();
-//                                                                            progressBar.setVisibility(View.INVISIBLE);
-//                                                                            signUpButton.setText("SIGN UP");
-//
-//                                                                            Toast.makeText(getContext(), "Something Went Wrong" + task.getException(), Toast.LENGTH_SHORT).show();
-//                                                                        }
-//                                                                    }
-//                                                                });
-//
-//
-//
-//
-//
-//                                                            }
-//
-//
-//
-//
-//                                                        }
-//                                                        else
-//                                                        {
-//                                                            fireBaseAuth.signOut();
-//                                                            progressBar.setVisibility(View.INVISIBLE);
-//                                                            signUpButton.setText("SIGN UP");
-//
-//                                                            Toast.makeText(getContext(), "Error"+ task.getException(), Toast.LENGTH_SHORT).show();
-//
-//                                                        }
-//                                                    }
-//                                                });
-//
-//
-//                                            } else
-//                                            {
-//                                                progressBar.setVisibility(View.INVISIBLE);
-//                                                signUpButton.setText("SIGN UP");
-//                                                Toast.makeText(getContext(), "Some Error Occured" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-//
-//                                            }
-//
-//                                        }
-//                                    });
-//
-//
-//                                    Toast.makeText(getContext(), "Your Account Has Been Created", Toast.LENGTH_SHORT).show();
-//                                }
-//                                else
-//                                {
-//                                    Toast.makeText(getContext(), "Some Error Occured" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-//                                    signUpButton.setEnabled(true);
-//                                    progressBar.setVisibility(View.INVISIBLE);
-//                                    signUpButton.setText("SIGN UP");
-//
-//                                }
-//
-//                            }
-//                        });
-//                    }
-//                    else{
-//                        cnfPassEt.setError("Password does not matches");
-//                    }
-//                }
-//                else
-//                {
-//                    emailEt.setError("Please Enter The Valid Email Address");
-//                }
-//
-//
-//
-//
-//            }
-//        });
-//
+
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(emailEt.getText().toString().matches(emailPattern))
+                {
+                    if (passwordEt.getText().toString().equals(cnfPassEt.getText().toString()))
+                    {
+                        // ready to authenticate;
+                        signUpButton.setEnabled(false);
+                        progressBar.setVisibility(View.VISIBLE);
+                        signUpButton.setText("");
+
+                        String email = emailEt.getText().toString();
+                        String password = passwordEt.getText().toString();
+                        fireBaseAuth.createUserWithEmailAndPassword(email , password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful())
+                                {
+                                    fireBaseAuth.signInWithEmailAndPassword(email , password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<AuthResult> task) {
+                                            if (task.isSuccessful()) {
+
+                                                // date -- firebase
+                                                Map<String , Object> basicDetails = new HashMap<>();
+                                                basicDetails.put("full name", fullNameEt.getText().toString());
+                                                basicDetails.put("mobile_no", mobileEt.getText().toString());
+                                                basicDetails.put("email", emailEt.getText().toString());
+
+
+                                                firestore.collection("USERS").document(fireBaseAuth.getUid()).set(basicDetails).addOnCompleteListener(task1 -> {
+                                                    if (task1.isSuccessful()) {
+
+
+
+                                                                        Intent intent = new Intent(getContext(), MainActivity.class);
+                                                                        Toast.makeText(getContext(), "Logged In!", Toast.LENGTH_SHORT).show();
+                                                                        startActivity(intent);
+                                                                        getActivity().finish();
+
+                                                                    }
+                                                    else
+                                                                    {
+                                                                        fireBaseAuth.signOut();
+                                                                        progressBar.setVisibility(View.INVISIBLE);
+                                                                        signUpButton.setText("SIGN UP");
+
+                                                                        Toast.makeText(getContext(), "Something Went Wrong" + task1.getException(), Toast.LENGTH_SHORT).show();
+                                                                    }
+                                                                });
+
+
+
+
+
+                                                            }
+
+
+                                            else
+                                            {
+                                                progressBar.setVisibility(View.INVISIBLE);
+                                                signUpButton.setText("SIGN UP");
+                                                Toast.makeText(getContext(), "Some Error Occured" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+
+                                            }
+
+                                        }
+                                    });
+
+
+                                    Toast.makeText(getContext(), "Your Account Has Been Created", Toast.LENGTH_SHORT).show();
+                                }
+                                else
+                                {
+                                    Toast.makeText(getContext(), "Some Error Occured" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                    signUpButton.setEnabled(true);
+                                    progressBar.setVisibility(View.INVISIBLE);
+                                    signUpButton.setText("SIGN UP");
+
+                                }
+
+                            }
+                        });
+                    }
+                    else{
+                        cnfPassEt.setError("Password does not matches");
+                    }
+                }
+                else
+                {
+                    emailEt.setError("Please Enter The Valid Email Address");
+                }
+
+
+
+
+            }
+        });
+
 
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
