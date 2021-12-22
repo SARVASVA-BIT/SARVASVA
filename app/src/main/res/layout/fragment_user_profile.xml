@@ -8,40 +8,41 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:background="@drawable/user_profile_bg"
-    tools:context=".UserProfile">
+    tools:context=".app.fragments.UserProfile">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <LinearLayout
-            android:padding="8dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:padding="5dp"
-                    android:layout_alignParentStart="true"
-                    android:src="@drawable/ic_arrow_back"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"/>
+<!--        <LinearLayout-->
+<!--            android:padding="8dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize">-->
+<!--&lt;!&ndash;            <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="match_parent">&ndash;&gt;-->
 
-<!--                <ImageView-->
-<!--                    android:layout_width="45dp"-->
-<!--                    android:layout_height="45dp"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:layout_marginStart="5dp"-->
-<!--                    android:layout_marginTop="5dp"-->
-<!--                    android:layout_marginEnd="5dp"-->
-<!--                    android:layout_marginBottom="5dp"-->
-<!--                    android:padding="1dp"-->
-<!--                    android:src="@drawable/ic_settings" />-->
+<!--&lt;!&ndash;                <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_alignParentStart="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:padding="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:src="@drawable/ic_arrow_back" />&ndash;&gt;-->
 
-            </RelativeLayout>
+<!--&lt;!&ndash;&lt;!&ndash;                <ImageView&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    android:layout_width="45dp"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    android:layout_height="45dp"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    android:layout_alignParentEnd="true"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    android:layout_marginStart="5dp"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    android:layout_marginTop="5dp"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    android:layout_marginEnd="5dp"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    android:layout_marginBottom="5dp"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    android:padding="1dp"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    android:src="@drawable/ic_settings" />&ndash;&gt;&ndash;&gt;-->
 
-        </LinearLayout>
+<!--&lt;!&ndash;            </RelativeLayout>&ndash;&gt;-->
+
+<!--        </LinearLayout>-->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"

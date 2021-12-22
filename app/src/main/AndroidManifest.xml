@@ -22,6 +22,7 @@
             android:name=".app.activities.AuthenticationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBarTheme" />
+
         <activity
             android:name=".app.activities.SplashActivity"
             android:exported="true"
