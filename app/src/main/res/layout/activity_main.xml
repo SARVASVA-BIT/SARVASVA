@@ -55,12 +55,22 @@
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
         app:menu="@menu/main_drawer_menu"
-
-
+        app:headerLayout="@layout/nav_header"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        />
+        android:layout_gravity="start">
+
+<!--    <ExpandableListView-->
+<!--        android:id="@+id/left_drawer2"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_gravity="start"-->
+<!--        android:background="@color/white"-->
+<!--        android:choiceMode="multipleChoice"-->
+<!--        android:dividerHeight="0dp"-->
+<!--        />-->
+    </com.google.android.material.navigation.NavigationView>
+
 
 
 
