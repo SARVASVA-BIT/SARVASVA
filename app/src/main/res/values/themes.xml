@@ -36,4 +36,9 @@
     <style name="Theme.Sarvasva.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Sarvasva.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+        <item name="color">@color/teal_700</item>
+
+    </style>
 </resources>

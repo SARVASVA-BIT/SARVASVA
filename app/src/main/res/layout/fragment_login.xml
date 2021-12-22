@@ -23,7 +23,7 @@
 
     <EditText
         android:id="@+id/emailEt"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
@@ -97,7 +97,7 @@
     <View
         android:id="@+id/divider"
         android:layout_width="130dp"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@id/OrTv"
 
@@ -109,7 +109,7 @@
     <View
         android:id="@+id/divider2"
         android:layout_width="130dp"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:background="@color/white"
         android:layout_marginRight="4dp"
         app:layout_constraintLeft_toRightOf="@id/OrTv"
@@ -138,9 +138,10 @@
 
     <ImageView
         android:id="@+id/closeBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:src="@drawable/closebutton"
+        android:layout_margin="16dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
