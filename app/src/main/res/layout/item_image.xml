@@ -82,39 +82,18 @@
                         android:textColor="#636262"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"/>
-<!--                    <View-->
-<!--                        android:background="#79D6D1D1"-->
-<!--                        android:layout_width="1dp"-->
-<!--                        android:layout_height="match_parent"/>-->
-<!--                    <TextView-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:text="Vitals"-->
-<!--                        android:gravity="center"-->
-<!--                        android:textStyle="bold"-->
-<!--                        android:textSize="14sp"-->
-<!--                        android:textColor="#636262"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"/>-->
-
-
                 </LinearLayout>
-
-
-
             </LinearLayout>
-
-
         </androidx.cardview.widget.CardView>
-
-
     </RelativeLayout>
+
     <ImageView
         android:id="@+id/user_dp"
-        android:src="@drawable/user_profile"
-        app:shapeAppearanceOverlay="@style/Circular"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_centerHorizontal="true"
         android:elevation="15dp"
         android:padding="5dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="98dp"
-        android:layout_height="98dp"/>
+        android:src="@drawable/user_profile"
+        app:shapeAppearanceOverlay="@style/Circular" />
 </RelativeLayout>
