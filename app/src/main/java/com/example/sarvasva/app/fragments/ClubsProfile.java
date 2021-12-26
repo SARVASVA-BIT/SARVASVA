@@ -51,14 +51,14 @@ public class ClubsProfile extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        viewAllGallery.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getContext(), ViewAllActivity.class);
-                startActivity(intent);
-                getActivity().finish();
-            }
-        });
+//        viewAllGallery.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getContext(), ViewAllActivity.class);
+//                startActivity(intent);
+//                getActivity().finish();
+//            }
+//        });
         horizontalList = new ArrayList<>();
         horizontalList.add(new HorizontalItemModel(R.drawable.app_icon));
         horizontalList.add(new HorizontalItemModel(R.drawable.sign_up));
