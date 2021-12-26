@@ -2,6 +2,7 @@ package com.example.sarvasva.app.fragments;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -267,7 +268,7 @@ public class SignUpFragment extends Fragment {
                         });
                     }
                     else{
-                        cnfPassEt.setError("Password does not matches");
+                        cnfPassEt.setError("Passwords do not match");
                     }
                 }
                 else

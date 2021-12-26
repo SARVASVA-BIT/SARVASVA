@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".app.fragments.ClubDirectory"
-    android:background="@drawable/user_profile_bg">
+    android:background="@drawable/user_profile_bg"
+    android:id="@+id/club_directory">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -34,12 +35,12 @@
                     android:padding="2dp"
                     android:src="@drawable/edc_logo"
                     android:layout_marginStart="5dp"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"/>
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"/>
                 <TextView
                     android:text="EDC"
                     android:layout_marginStart="10dp"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:textColor="#605E5E"
@@ -69,12 +70,12 @@
                     android:padding="2dp"
                     android:src="@drawable/aveon_logo"
                     android:layout_marginStart="5dp"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"/>
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"/>
                 <TextView
                     android:text="Team Aveon Racing"
                     android:layout_marginStart="10dp"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:textColor="#605E5E"
@@ -84,6 +85,41 @@
 
 
         </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/gdsc"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:card_view="http://schemas.android.com/tools"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true"
+                card_view:cardCornerRAdius="5dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/gdsc"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
+                    <TextView
+                        android:text="GDSC"
+                        android:layout_marginStart="10dp"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="#605E5E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/ieee"
                 xmlns:android="http://schemas.android.com/apk/res/android"
@@ -104,12 +140,12 @@
                         android:padding="2dp"
                         android:src="@drawable/ieee"
                         android:layout_marginStart="5dp"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"/>
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
                         android:text="IEEE"
                         android:layout_marginStart="10dp"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
@@ -139,12 +175,12 @@
                         android:padding="2dp"
                         android:src="@drawable/acm"
                         android:layout_marginStart="5dp"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"/>
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
                         android:text="ACM"
                         android:layout_marginStart="10dp"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
@@ -174,12 +210,12 @@
                         android:padding="2dp"
                         android:src="@drawable/iet"
                         android:layout_marginStart="5dp"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"/>
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
                         android:text="IET"
                         android:layout_marginStart="10dp"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
@@ -209,12 +245,12 @@
                         android:padding="2dp"
                         android:src="@drawable/litsoc"
                         android:layout_marginStart="5dp"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"/>
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
                         android:text="Literary Society"
                         android:layout_marginStart="10dp"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
@@ -244,12 +280,12 @@
                         android:padding="2dp"
                         android:src="@drawable/ehsaas"
                         android:layout_marginStart="5dp"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"/>
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
                         android:text="Ehsaas Dramatics Society"
                         android:layout_marginStart="10dp"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
@@ -279,12 +315,12 @@
                         android:padding="2dp"
                         android:src="@drawable/srijan"
                         android:layout_marginStart="5dp"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"/>
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
                         android:text="Team Srijan"
                         android:layout_marginStart="10dp"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
@@ -314,12 +350,12 @@
                         android:padding="2dp"
                         android:src="@drawable/firebolt"
                         android:layout_marginStart="5dp"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"/>
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
                         android:text="Firebolt Racing"
                         android:layout_marginStart="10dp"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
@@ -349,12 +385,12 @@
                     android:padding="2dp"
                     android:src="@drawable/epac"
                     android:layout_marginStart="5dp"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"/>
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"/>
                 <TextView
                     android:text="EPAC"
                     android:layout_marginStart="10dp"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:textColor="#605E5E"
@@ -384,12 +420,12 @@
                         android:padding="2dp"
                         android:src="@drawable/sds"
                         android:layout_marginStart="5dp"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"/>
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
                         android:text="SDS"
                         android:layout_marginStart="10dp"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
@@ -419,12 +455,12 @@
                         android:padding="2dp"
                         android:src="@drawable/iei"
                         android:layout_marginStart="5dp"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"/>
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
                         android:text="IEI Civil"
                         android:layout_marginStart="10dp"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
@@ -454,12 +490,12 @@
                         android:padding="2dp"
                         android:src="@drawable/iete"
                         android:layout_marginStart="5dp"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"/>
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
                         android:text="IETE"
                         android:layout_marginStart="10dp"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
@@ -489,12 +525,12 @@
                         android:padding="2dp"
                         android:src="@drawable/unesquo"
                         android:layout_marginStart="5dp"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"/>
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
                         android:text="UNESQUO"
                         android:layout_marginStart="10dp"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
@@ -504,6 +540,7 @@
 
 
             </androidx.cardview.widget.CardView>
+
 
 
 
