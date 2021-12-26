@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
           });
-          //ammouncement , also the home page
+          //announcement , also the home page
 
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

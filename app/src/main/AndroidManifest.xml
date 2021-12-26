@@ -11,12 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sarvasva">
         <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
+            android:name=".app.activities.ViewAllActivity"
+            android:theme="@style/NoActionBarTheme" />
         <activity
             android:name=".app.activities.MainActivity"
             android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
         <activity
             android:name=".app.activities.AuthenticationActivity"
             android:screenOrientation="portrait"
