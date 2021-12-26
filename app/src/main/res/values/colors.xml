@@ -12,6 +12,7 @@
     <color name="red">#e81123</color>
     <color name="bluegrey500">#607D8B</color>
     <color name="bluegrey400">#78909C</color>
+    <color name="teal_50">#E0F2F1</color>
 
     <color name="white">#FFFFFFFF</color>
 </resources>
