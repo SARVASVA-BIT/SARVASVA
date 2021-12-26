@@ -3,6 +3,8 @@
     package="com.example.sarvasva">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -15,6 +17,7 @@
             android:theme="@style/NoActionBarTheme" />
         <activity
             android:name=".app.activities.MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBarTheme" />
         <activity
             android:name=".ui.login.LoginActivity"

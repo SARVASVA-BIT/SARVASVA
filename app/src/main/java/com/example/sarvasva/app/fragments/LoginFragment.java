@@ -2,7 +2,7 @@ package com.example.sarvasva.app.fragments;
 
 
 import static android.content.ContentValues.TAG;
-
+import com.example.sarvasva.app.activities.MainActivity;
 import static com.example.sarvasva.app.activities.AuthenticationActivity.isLoginFragment;
 
 import android.app.Activity;
@@ -90,6 +90,7 @@ public class LoginFragment extends Fragment {
         return view;
 
     }
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -209,6 +210,9 @@ public class LoginFragment extends Fragment {
 
 
     }
+
+
+
     private void signIn() {
         //getting the google signin intent
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
