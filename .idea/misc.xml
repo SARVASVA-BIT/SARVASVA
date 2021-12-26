@@ -3,16 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/drawable/rounded_corner_button_layout.xml" value="0.2703125" />
+        <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout-w1240dp/activity_view_all.xml" value="0.16331994645247658" />
+        <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout-w936dp/horizontal_product_layout.xml" value="0.190625" />
+        <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout-w936dp/horizontal_slider_layout.xml" value="0.4" />
+        <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout-w936dp/view_all_image_layout.xml" value="0.18954918032786885" />
         <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/activity_authentication.xml" value="0.25416666666666665" />
         <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
         <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/drawer_layout2.xml" value="0.25416666666666665" />
         <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/expandable_list_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/fragment_club_directory.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/fragment_club_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/fragment_user_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/hey.xml" value="0.25416666666666665" />
         <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/item_image.xml" value="0.13020833333333334" />
         <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/item_user_clubs.xml" value="0.25416666666666665" />
         <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/list_group.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/list_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/list_slidermenu.xml" value="0.13020833333333334" />
         <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/nav_header.xml" value="0.4" />
+        <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/layout/view_all_image_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/menu/main_drawer_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Android Development/SARVASVA-MAIN/app/src/main/res/mipmap-anydpi-v26/user_profile.xml" value="0.26615384615384613" />
         <entry key="..\:/Android Development/sarvasva3/app/src/main/res/drawable/closebutton.xml" value="0.14635416666666667" />
@@ -26,20 +36,7 @@
         <entry key="..\:/Android Development/sarvasva3/app/src/main/res/layout/fragment_sign_up.xml" value="0.264" />
         <entry key="..\:/Android Development/sarvasva3/app/src/main/res/menu/main_drawer_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Android Development/sarvasva3/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2703125" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/font/custom_font.xml" value="0.28072916666666664" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/layout/activity_main.xml" value="0.24666666666666667" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/layout/activity_splash.xml" value="0.25052083333333336" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/layout/fragment_club_directory.xml" value="0.25052083333333336" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/layout/fragment_club_profile.xml" value="0.264" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/layout/fragment_forgot_password.xml" value="0.25052083333333336" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/layout/fragment_login.xml" value="0.25" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/layout/fragment_sign_up.xml" value="0.264" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/layout/fragment_user_profile.xml" value="0.25052083333333336" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/layout/item_image.xml" value="0.24666666666666667" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.26666666666666666" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.26666666666666666" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/mipmap-anydpi-v26/user_profile.xml" value="0.26666666666666666" />
-        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/mipmap-anydpi-v26/user_profile_round.xml" value="0.26666666666666666" />
+        <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/layout/fragment_sign_up.xml" value="0.12760416666666666" />
       </map>
     </option>
   </component>
