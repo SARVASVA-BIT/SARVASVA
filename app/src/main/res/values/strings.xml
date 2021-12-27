@@ -123,8 +123,8 @@
     <string name="club_position">Member</string>
     <string name="user_phn">+91 98000000000</string>
     <string name="user_mail">btech10123.20@bitmesra.com</string>
-        <string name="club_name">Entrepreneurship Development Cell</string>
-        <string name="club_about">
+    <string name="club_name">Entrepreneurship Development Cell</string>
+    <string name="club_about">
             We, at Entrepreneurship Development Cell, are dedicated to fostering the culture of innovation-led startups and entrepreneurial mindset amongst students of our esteemed institution. We are a body of budding individuals, with interests in the financial and business world along with an aim to bridge the gap between innovations and opportunities and bring together seasoned entrepreneurs and students on a single stage in today’s labyrinth of evolving technology and business.
         </string>
 </resources>
