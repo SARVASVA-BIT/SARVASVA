@@ -94,7 +94,7 @@
                                 android:text="Dean Faculty Affairs (DoFA)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -108,7 +108,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_phone"
@@ -122,7 +122,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -135,7 +135,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -179,7 +179,7 @@
                                 android:text="Dean of Admission, Accreditation AND Coordination(DAAC)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -193,7 +193,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_phone"
@@ -207,7 +207,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -220,7 +220,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -266,7 +266,7 @@
                                 android:text="Dean Alumni &amp; International Relations (DAIR)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -280,7 +280,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_phone"
@@ -294,7 +294,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="0dp"
@@ -308,7 +308,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -354,7 +354,7 @@
                                 android:text="Dean Student Affairs (DoSA)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -368,7 +368,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_phone"
@@ -382,7 +382,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -395,7 +395,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -440,7 +440,7 @@
                                 android:text="Dean of Undergraduate Studies (DUGS)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -454,7 +454,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_phone"
@@ -468,7 +468,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -481,7 +481,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -527,7 +527,7 @@
                                 android:text="Dean of Post Graduate Studies(DPGS)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -542,7 +542,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="0dp"
@@ -556,7 +556,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -602,7 +602,7 @@
                                 android:text="Dean of Research, Innovation &amp; Entrepreneurship (DRIE)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -617,7 +617,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -630,7 +630,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -674,7 +674,7 @@
                                 android:text="Dean of Infrastructure and Planning (DoIP)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -688,7 +688,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_phone"
@@ -702,7 +702,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -715,7 +715,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"

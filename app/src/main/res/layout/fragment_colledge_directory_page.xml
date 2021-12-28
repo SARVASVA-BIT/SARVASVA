@@ -34,7 +34,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <androidx.cardview.widget.CardView
-                android:id="@+id/edc"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,21 +49,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/TopOfficial"
                         android:text="Top Officials"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
-                        android:textSize="30sp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/aveon"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,21 +79,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/dean"
                         android:text="Deans"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
-                        android:textSize="30sp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/ieee"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -110,21 +109,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                            android:id="@+id/iqac"
                         android:text="Director IQAC"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
-                        android:textSize="30sp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/acm"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -140,21 +139,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/hod"
                         android:text="HOD"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
-                        android:textSize="30sp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/iet"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -170,21 +169,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/associatedean"
                         android:text="Associate Deans"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
-                        android:textSize="30sp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/litsoc"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -200,21 +199,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/administration"
                         android:text="Administration"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
-                        android:textSize="30sp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/ehsaas"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -230,21 +229,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/otherofficials"
                         android:text="Other Officials"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
-                        android:textSize="30sp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/srijan"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -260,21 +259,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/accountandpur"
                         android:text="Accounts AND Purchase"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
-                        android:textSize="30sp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/firebolt"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -290,21 +289,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/dispensary"
                         android:text="Dispensary"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
-                        android:textSize="30sp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/epac"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -320,21 +319,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/warden"
                         android:text="Hostel Warden"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
-                        android:textSize="30sp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/sds"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -350,14 +349,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/examination"
                         android:text="Examination"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
-                        android:textSize="30sp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:textColor="#605E5E"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 

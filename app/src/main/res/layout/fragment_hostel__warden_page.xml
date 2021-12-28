@@ -93,7 +93,7 @@
                                 android:text="Warden Hostel 1"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -108,7 +108,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -121,7 +121,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -165,7 +165,7 @@
                                 android:text="Warden Hostel 2"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -180,7 +180,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -193,7 +193,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -237,7 +237,7 @@
                             android:text="Warden Hostel 3"
                             android:layout_marginBottom="5dp"/>
 
-                        <EditText
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@drawable/ic_person"
@@ -252,7 +252,7 @@
                             android:textStyle="bold" />
 
 
-                        <EditText
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@drawable/ic_person_telephone"
@@ -265,7 +265,7 @@
                             android:background="@drawable/custom_input"
                             android:textSize="15dp"
                             android:textStyle="bold" />
-                        <EditText
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@drawable/ic_person_email"
@@ -310,7 +310,7 @@
                                 android:text="Warden Hostel 4"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -325,7 +325,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -338,7 +338,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -382,7 +382,7 @@
                                 android:text="Warden Hostel 5"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -397,7 +397,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -410,7 +410,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -454,7 +454,7 @@
                                 android:text="Warden Hostel 6"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -469,7 +469,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -482,7 +482,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -527,7 +527,7 @@
                                 android:text="Warden Hostel 7"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -542,7 +542,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -555,7 +555,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -599,7 +599,7 @@
                                 android:text="Warden Hostel 8"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -614,7 +614,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -627,7 +627,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -671,7 +671,7 @@
                                 android:text="Warden Hostel 9"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -686,7 +686,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -699,7 +699,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -745,7 +745,7 @@
                                 android:text="Warden Hostel 10"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -760,7 +760,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -773,7 +773,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -817,7 +817,7 @@
                                 android:text="Warden Hostel 11"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -832,7 +832,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -845,7 +845,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -889,7 +889,7 @@
                                 android:text="Warden Hostel 12"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -904,7 +904,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -917,7 +917,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -962,7 +962,7 @@
                                 android:text="Warden Hostel 13"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -977,7 +977,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -990,7 +990,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -1034,7 +1034,7 @@
                                 android:text="Warden Hostel 14"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -1049,7 +1049,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -1062,7 +1062,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
