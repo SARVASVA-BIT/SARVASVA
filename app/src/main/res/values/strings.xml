@@ -104,6 +104,7 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="title_activity_map">GoogleMapActivity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -127,4 +128,5 @@
     <string name="club_about">
             We, at Entrepreneurship Development Cell, are dedicated to fostering the culture of innovation-led startups and entrepreneurial mindset amongst students of our esteemed institution. We are a body of budding individuals, with interests in the financial and business world along with an aim to bridge the gap between innovations and opportunities and bring together seasoned entrepreneurs and students on a single stage in today’s labyrinth of evolving technology and business.
         </string>
+    <string name="title_activity_maps_inactivity">Maps_inactivity</string>
 </resources>

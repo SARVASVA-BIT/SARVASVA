@@ -93,7 +93,7 @@
                                 android:text="Prof. In-charge, Information &amp; Communication Technology Cell"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -107,7 +107,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_phone"
@@ -121,7 +121,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -134,7 +134,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -178,7 +178,7 @@
                                 android:text="Prof. In-charge, Career Development Cell"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -193,7 +193,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -206,7 +206,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -252,7 +252,7 @@
                                 android:text="Prof. In-charge, Central Library"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -267,7 +267,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="0dp"
@@ -281,7 +281,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -327,7 +327,7 @@
                                 android:text="Chairperson, Internal Complaint Committee"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -341,7 +341,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_phone"
@@ -355,7 +355,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -368,7 +368,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -413,7 +413,7 @@
                                 android:text="Prof. In-charge, Water Resource Management"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -427,7 +427,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_phone"
@@ -441,7 +441,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -454,7 +454,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -500,7 +500,7 @@
                                 android:text="Prof. In-charge, Central Instrumentation Facility (CIF)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -516,7 +516,7 @@
 
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="0dp"
@@ -530,7 +530,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -576,7 +576,7 @@
                                 android:text="Chairperson, Institute Service Regularization Committee (IRC)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -592,7 +592,7 @@
 
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -605,7 +605,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -649,7 +649,7 @@
                                 android:text="Coordinator, Technical Education Quality Improvement Programme (TEQIP)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -663,7 +663,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_phone"
@@ -677,7 +677,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -690,7 +690,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -735,7 +735,7 @@
                                 android:text="Controller of Admission (CoA)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -750,7 +750,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -763,7 +763,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -808,7 +808,7 @@
                                 android:text="Central Library, Acting Librarian"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -822,7 +822,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_phone"
@@ -836,7 +836,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -849,7 +849,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -894,7 +894,7 @@
                                 android:text="Associate In-charge, Security"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -910,7 +910,7 @@
 
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -923,7 +923,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -968,7 +968,7 @@
                                 android:text="Associate In-charge, Water Resource Management"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -983,7 +983,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -996,7 +996,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -1041,7 +1041,7 @@
                                 android:text="Associate In-charge, Energy Management Services"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -1056,7 +1056,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -1069,7 +1069,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -1115,7 +1115,7 @@
                                 android:text="In-charge, Planning &amp; Development (P&amp;D)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -1130,7 +1130,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -1143,7 +1143,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -1189,7 +1189,7 @@
                                 android:text="First Appellate Authority (RTI Act)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -1204,7 +1204,7 @@
                                 android:textStyle="bold" />
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -1217,7 +1217,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -1263,7 +1263,7 @@
                                 android:text="Public Information Officer (PIO)"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -1279,7 +1279,7 @@
 
 
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_telephone"
@@ -1292,7 +1292,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"

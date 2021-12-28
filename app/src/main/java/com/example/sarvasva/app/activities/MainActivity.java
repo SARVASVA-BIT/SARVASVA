@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.example.sarvasva.R;
 import com.example.sarvasva.app.fragments.ClubDirectory;
+import com.example.sarvasva.app.fragments.Colledge_directory_page;
 import com.example.sarvasva.app.fragments.UserProfile;
 
 import com.example.sarvasva.app.fragments.Announcements;
@@ -133,6 +134,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_clubs:
                         setFragment(new ClubDirectory());
                         break;
+                    case R.id.nav_DIRECTORY:
+                        setFragment(new Colledge_directory_page());
+                        break;
                     case R.id.nav_Logout:
 
                         FirebaseAuth.getInstance().signOut();
@@ -143,6 +147,17 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                         break;
+                    case R.id.nav_MAPS:
+                        Intent intent1 = new Intent(MainActivity.this , GoogleMapsInSarvasva.class);
+                        startActivity(intent1);
+                        finish();
+                        break;
+                    case R.id.nav_ERP:
+                        Intent intent2 = new Intent(MainActivity.this , WebVIiewERP.class);
+                        startActivity(intent2);
+                        finish();
+                        break;
+
                     default:
                         fragmentClass = Announcements.class;
                 }

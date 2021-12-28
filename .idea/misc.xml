@@ -52,10 +52,18 @@
         <entry key="..\:/SARVASVA-final/app/src/main/res/drawable/ic_user_place_holder.xml" value="0.21574074074074073" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.163671875" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout-w936dp/activity_login.xml" value="0.164453125" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout-w936dp/horizontal_slider_layout.xml" value="0.6" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/activity_authentication.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/activity_google_maps_in_sarvasva.xml" value="0.21927083333333333" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/activity_login.xml" value="0.21927083333333333" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/activity_main.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/activity_maps_inactivity.xml" value="0.21927083333333333" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/activity_splash.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/activity_view_all.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/activity_web_viiew_erp.xml" value="0.20208333333333334" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/content_authentication.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/content_maps_inactivity.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/content_splash.xml" value="0.21927083333333333" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_account_and_purchase.xml" value="0.21927083333333333" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_administration_page.xml" value="0.21927083333333333" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_announcements.xml" value="0.21927083333333333" />
@@ -71,15 +79,28 @@
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_directory__i_q_a_c.xml" value="0.20208333333333334" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_dispensary.xml" value="0.264" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_examination_page.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_first.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_forgot_password.xml" value="0.21927083333333333" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_h_o_d.xml" value="0.20208333333333334" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_hostel__warden_page.xml" value="0.20208333333333334" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_login.xml" value="0.176" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_map_location.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_map_sarvasva.xml" value="0.21927083333333333" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_other_officials.xml" value="0.264" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_second.xml" value="0.21927083333333333" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_sign_up.xml" value="0.21927083333333333" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/fragment_user_profile.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/item_email.xml" value="0.21927083333333333" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/item_image.xml" value="0.21927083333333333" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/item_phone.xml" value="0.21927083333333333" />
         <entry key="..\:/SARVASVA-final/app/src/main/res/layout/item_user_clubs.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/list_group.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/list_item.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/list_slidermenu.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/nav_header.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/layout/view_all_image_layout.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/menu/main_drawer_menu.xml" value="0.21927083333333333" />
+        <entry key="..\:/SARVASVA-final/app/src/main/res/mipmap-anydpi-v26/user_profile.xml" value="0.23493360572012256" />
       </map>
     </option>
   </component>

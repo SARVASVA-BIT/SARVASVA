@@ -91,7 +91,7 @@
                                 android:text="Vice Chancellor"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -105,7 +105,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_phone"
@@ -119,7 +119,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_fax"
@@ -132,7 +132,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -176,7 +176,7 @@
                                 android:text="Registrar"
                                 android:layout_marginBottom="5dp"/>
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person"
@@ -190,7 +190,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_phone"
@@ -204,7 +204,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_mobile"
@@ -217,7 +217,7 @@
                                 android:background="@drawable/custom_input"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
-                            <EditText
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_person_email"
@@ -273,7 +273,7 @@
                                     android:text="Controller of Examination (CoE)"
                                     android:layout_marginBottom="5dp"/>
 
-                                <EditText
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:drawableLeft="@drawable/ic_person"
@@ -287,7 +287,7 @@
                                     android:textSize="15dp"
                                     android:textStyle="bold" />
 
-                                <EditText
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:drawableLeft="@drawable/ic_person_phone"
@@ -301,7 +301,7 @@
                                     android:textSize="15dp"
                                     android:textStyle="bold" />
 
-                                <EditText
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="0dp"
@@ -315,7 +315,7 @@
                                     android:textSize="15dp"
                                     android:textStyle="bold" />
 
-                                <EditText
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:drawableLeft="@drawable/ic_person_email"
