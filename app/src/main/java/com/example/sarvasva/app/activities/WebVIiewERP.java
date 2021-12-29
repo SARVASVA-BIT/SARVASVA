@@ -20,7 +20,7 @@ public class WebVIiewERP extends AppCompatActivity {
 
         webview  = (WebView) findViewById(R.id.webviewERP) ;
         webview.setWebViewClient(new WebViewClient());
-        webview.loadUrl("https://www.bitmesra.ac.in/Show_Content_Section?cid=1&pid=365");
+        webview.loadUrl("https://erp.bitmesra.ac.in/iitmsv4eGq0RuNHb0G5WbhLmTKLmTO7YBcJ4RHuXxCNPvuIw=?enc=EGbCGWnlHNJ/WdgJnKH8DA==");
 
         WebSettings webSettings = webview.getSettings();
         webSettings.setJavaScriptEnabled(true);

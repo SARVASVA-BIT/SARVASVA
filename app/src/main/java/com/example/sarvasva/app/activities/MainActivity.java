@@ -148,12 +148,11 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                         break;
-//                    case R.id.nav_MAPS:
-//                        Intent intent1 = new Intent(MainActivity.this , GoogleMapsInSarvasva.class);
-//                        startActivity(intent1);
-//                        finish();
-
-//                        break;
+                    case R.id.nav_MAPS:
+                        Intent intent1 = new Intent(MainActivity.this , GoogleMapsInSarvasva.class);
+                        startActivity(intent1);
+                        finish();
+                        break;
                     case R.id.nav_ERP:
                         Intent intent2 = new Intent(MainActivity.this , WebVIiewERP.class);
                         startActivity(intent2);
