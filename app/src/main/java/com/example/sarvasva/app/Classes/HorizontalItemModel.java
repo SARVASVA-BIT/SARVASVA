@@ -1,20 +1,20 @@
 package com.example.sarvasva.app.Classes;
 
 public class HorizontalItemModel {
-    public int imageResource;
+    public String imageResource;
 
 
 
-    public HorizontalItemModel(int imageResource) {
+    public HorizontalItemModel(String imageResource) {
         this.imageResource = imageResource;
 
     }
 
-    public int getImageResource() {
+    public String getImageResource() {
         return imageResource;
     }
 
-    public void setImageResource(int imageResource) {
+    public void setImageResource(String imageResource) {
         this.imageResource = imageResource;
     }
 

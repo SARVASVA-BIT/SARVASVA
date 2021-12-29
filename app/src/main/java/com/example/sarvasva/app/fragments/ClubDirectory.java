@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.sarvasva.R;
+import com.example.sarvasva.app.fragments.clubProfiles.AveonProfile;
 
 
 public class ClubDirectory extends Fragment implements View.OnClickListener {
@@ -49,6 +50,15 @@ public class ClubDirectory extends Fragment implements View.OnClickListener {
             }
         });
 
+
+        Card = (CardView) view.findViewById(R.id.aveon);
+        Card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                        changeFragment(new AveonProfile());
+             }
+        });
+
         return view;
     }
 
@@ -62,10 +72,23 @@ public class ClubDirectory extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
+//        if(view.getId()== R.id.edc)
+//        {
+//            changeFragment(new ClubsProfile());
+//
+//        }
+//        else if (view.getId()== R.id.team_aveon)
+//        {
+//            changeFragment(new AveonProfile());
+//        }
+
         switch (view.getId())
         {
             case R.id.edc:
                 changeFragment(new ClubsProfile());
+                break;
+
+
         }
 
     }

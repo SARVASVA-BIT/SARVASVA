@@ -56,6 +56,7 @@
                 android:src="@drawable/ic_settings" />
 
             <TextView
+                android:id="@+id/club_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -64,8 +65,8 @@
                 android:fontFamily="@font/nanum_extrabold"
                 android:text="@string/club_name"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="27sp" />
+                android:textSize="27sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
         <androidx.cardview.widget.CardView
@@ -328,6 +329,7 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    android:id="@+id/club_president"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Sharwadi Shatank"
@@ -394,6 +396,7 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    android:id="@+id/club_joint_president"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Mr. X"
@@ -458,6 +461,7 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    android:id="@+id/club_vice_president"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Mr. X"
