@@ -59,21 +59,21 @@ public class ClubsProfile extends Fragment {
 //                getActivity().finish();
 //            }
 //        });
-        horizontalList = new ArrayList<>();
-        horizontalList.add(new HorizontalItemModel(R.drawable.app_icon));
-        horizontalList.add(new HorizontalItemModel(R.drawable.sign_up));
-        horizontalList.add(new HorizontalItemModel(R.drawable.forgot_pass_image));
-        horizontalList.add(new HorizontalItemModel(R.drawable.app_icon));
-        horizontalList.add(new HorizontalItemModel(R.drawable.edc_logo));
+//        horizontalList = new ArrayList<>();
+//        horizontalList.add(new HorizontalItemModel(R.drawable.app_icon));
+//        horizontalList.add(new HorizontalItemModel(R.drawable.sign_up));
+//        horizontalList.add(new HorizontalItemModel(R.drawable.forgot_pass_image));
+//        horizontalList.add(new HorizontalItemModel(R.drawable.app_icon));
+//        horizontalList.add(new HorizontalItemModel(R.drawable.edc_logo));
+//
+//        HorizontalProductAdaptor adapter = new HorizontalProductAdaptor(horizontalList);
 
-        HorizontalProductAdaptor adapter = new HorizontalProductAdaptor(horizontalList);
-
-        LinearLayoutManager manager = new LinearLayoutManager(getContext());
-        manager.setOrientation(RecyclerView.HORIZONTAL);
-        photoGalleryRv.setLayoutManager(manager);
-
-        photoGalleryRv.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
+//        LinearLayoutManager manager = new LinearLayoutManager(getContext());
+//        manager.setOrientation(RecyclerView.HORIZONTAL);
+//        photoGalleryRv.setLayoutManager(manager);
+//
+//        photoGalleryRv.setAdapter(adapter);
+//        adapter.notifyDataSetChanged();
 
 
     }

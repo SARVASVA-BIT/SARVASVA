@@ -62,6 +62,7 @@
             app:cardUseCompatPadding="true"
             card_view:cardCornerRAdius="5dp">
             <LinearLayout
+                android:id="@+id/team_aveon"
                 android:orientation="horizontal"
                 android:padding="3dp"
                 android:layout_width="match_parent"

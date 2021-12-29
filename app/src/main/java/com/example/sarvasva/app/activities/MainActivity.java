@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private View navHeader;
-    private TextView currentUser , clubsTv;
+    private TextView currentUser , clubsTv , titleTvMain;
     private ImageView userProfilePicture;
     private DrawerLayout drawer;
     private ExpandableListView drawerList;
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.main_drawer_layout);
         toolbar = findViewById(R.id.activity_main_toolbar);
         parentFrameLayout = findViewById(R.id.main_activity_frame_layout);
-
+        titleTvMain = findViewById(R.id.titleTvMain);
 
 
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawerOpen, R.string.drawerClose);
@@ -129,13 +129,14 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
 
-                        setFragment(new Announcements());
+                        goToFragment(new Announcements() , "Announcement");
+
                         break;
                     case R.id.nav_clubs:
-                        setFragment(new ClubDirectory());
+                        goToFragment(new ClubDirectory() , "CLUBS");
                         break;
                     case R.id.nav_DIRECTORY:
-                        setFragment(new Colledge_directory_page());
+                        goToFragment(new Colledge_directory_page() , "CAMPUS DIRECTORY");
                         break;
                     case R.id.nav_Logout:
 
@@ -147,11 +148,12 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                         break;
-                    case R.id.nav_MAPS:
-                        Intent intent1 = new Intent(MainActivity.this , GoogleMapsInSarvasva.class);
-                        startActivity(intent1);
-                        finish();
-                        break;
+//                    case R.id.nav_MAPS:
+//                        Intent intent1 = new Intent(MainActivity.this , GoogleMapsInSarvasva.class);
+//                        startActivity(intent1);
+//                        finish();
+
+//                        break;
                     case R.id.nav_ERP:
                         Intent intent2 = new Intent(MainActivity.this , WebVIiewERP.class);
                         startActivity(intent2);
@@ -208,12 +210,23 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private void setFragment(Fragment fragment){
+    private void setFragment(Fragment fragment)
+    {
 
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
         fragmentTransaction.replace(parentFrameLayout.getId(),fragment);
         fragmentTransaction.commit();
+
+    }
+
+
+    private void goToFragment(Fragment fragment , String title)
+    {
+
+        setFragment(fragment);
+        titleTvMain.setText(title);
+
 
     }
 //    private void prepareListData() {
