@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.sarvasva.R;
@@ -32,17 +33,17 @@ public class Colledge_directory_page extends Fragment implements View.OnClickLis
     private String mParam1;
     private String mParam2;
 
-    private TextView topofficial;
-    private TextView dean;
-    private TextView otherofficial;
-    private TextView hod;
-    private TextView associatedean ;
-    private TextView iqac ;
-    private TextView administration;
-    private TextView dispensary ;
-    private TextView accountpur;
-    private TextView examination ;
-    private TextView hostelwarden;
+    private LinearLayout topofficial;
+    private LinearLayout dean;
+    private LinearLayout otherofficial;
+    private LinearLayout hod;
+    private LinearLayout associatedean ;
+    private LinearLayout iqac ;
+    private LinearLayout administration;
+    private LinearLayout dispensary ;
+    private LinearLayout accountpur;
+    private LinearLayout examination ;
+    private LinearLayout hostelwarden;
 
     public Colledge_directory_page() {
         // Required empty public constructor
@@ -85,14 +86,14 @@ public class Colledge_directory_page extends Fragment implements View.OnClickLis
         View view= inflater.inflate(R.layout.fragment_colledge_directory_page, container, false);
 
 
-        topofficial= (TextView) view.findViewById(R.id.TopOfficial);
+        topofficial= (LinearLayout) view.findViewById(R.id.TopOfficial);
         topofficial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 changeFragment(new Colledge_Directory_bitmesra());
             }
         });
-        dean= (TextView) view.findViewById(R.id.dean);
+        dean= (LinearLayout) view.findViewById(R.id.dean);
         dean.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,7 +101,7 @@ public class Colledge_directory_page extends Fragment implements View.OnClickLis
             }
         });
 
-        iqac= (TextView) view.findViewById(R.id.iqac);
+        iqac= (LinearLayout) view.findViewById(R.id.iqac);
         iqac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,7 +109,7 @@ public class Colledge_directory_page extends Fragment implements View.OnClickLis
             }
         });
 
-        otherofficial= (TextView) view.findViewById(R.id.otherofficials);
+        otherofficial= (LinearLayout) view.findViewById(R.id.otherofficials);
         otherofficial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,7 +117,7 @@ public class Colledge_directory_page extends Fragment implements View.OnClickLis
             }
         });
 
-        hod= (TextView) view.findViewById(R.id.hod);
+        hod= (LinearLayout) view.findViewById(R.id.hod);
         hod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,7 +125,7 @@ public class Colledge_directory_page extends Fragment implements View.OnClickLis
             }
         });
 
-        hostelwarden= (TextView) view.findViewById(R.id.warden);
+        hostelwarden= (LinearLayout) view.findViewById(R.id.warden);
         hostelwarden.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -132,7 +133,7 @@ public class Colledge_directory_page extends Fragment implements View.OnClickLis
             }
         });
 
-        dispensary= (TextView) view.findViewById(R.id.dispensary);
+        dispensary= (LinearLayout) view.findViewById(R.id.dispensary);
         dispensary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -140,7 +141,7 @@ public class Colledge_directory_page extends Fragment implements View.OnClickLis
             }
         });
 
-        accountpur= (TextView) view.findViewById(R.id.accountandpur);
+        accountpur= (LinearLayout) view.findViewById(R.id.accountandpur);
         accountpur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -148,7 +149,7 @@ public class Colledge_directory_page extends Fragment implements View.OnClickLis
             }
         });
 
-        associatedean= (TextView) view.findViewById(R.id.associatedean);
+        associatedean= (LinearLayout) view.findViewById(R.id.associatedean);
         associatedean.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -156,7 +157,7 @@ public class Colledge_directory_page extends Fragment implements View.OnClickLis
             }
         });
 
-        administration= (TextView) view.findViewById(R.id.administration);
+        administration= (LinearLayout) view.findViewById(R.id.administration);
         administration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -178,7 +179,7 @@ public class Colledge_directory_page extends Fragment implements View.OnClickLis
         FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
         fragmentTransaction.setCustomAnimations(R.anim.fui_slide_in_right,R.anim.fui_slide_out_left);
         fragmentTransaction.replace(R.id.main_activity_frame_layout, fragment);
-        fragmentTransaction.commit(); }
+        fragmentTransaction.addToBackStack(null).commit(); }
 
     @Override
     public void onClick(View view) {

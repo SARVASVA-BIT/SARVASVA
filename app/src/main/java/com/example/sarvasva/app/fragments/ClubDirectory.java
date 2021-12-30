@@ -22,6 +22,7 @@ import com.example.sarvasva.app.fragments.clubProfiles.AveonProfile;
 public class ClubDirectory extends Fragment implements View.OnClickListener {
     private FrameLayout parentFrameLayout;
     private CardView Card;
+    FragmentTransaction fragmentTransaction;
 
 
 
@@ -64,32 +65,14 @@ public class ClubDirectory extends Fragment implements View.OnClickListener {
 
 
     private void changeFragment(Fragment fragment) {
-        FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+        fragmentTransaction = getParentFragmentManager().beginTransaction();
         fragmentTransaction.setCustomAnimations(R.anim.fui_slide_in_right,R.anim.fui_slide_out_left);
         fragmentTransaction.replace(R.id.main_activity_frame_layout, fragment);
-        fragmentTransaction.commit(); }
+        fragmentTransaction.addToBackStack(null).commit(); }
+
 
     @Override
     public void onClick(View view) {
-
-//        if(view.getId()== R.id.edc)
-//        {
-//            changeFragment(new ClubsProfile());
-//
-//        }
-//        else if (view.getId()== R.id.team_aveon)
-//        {
-//            changeFragment(new AveonProfile());
-//        }
-
-        switch (view.getId())
-        {
-            case R.id.edc:
-                changeFragment(new ClubsProfile());
-                break;
-
-
-        }
 
     }
 }

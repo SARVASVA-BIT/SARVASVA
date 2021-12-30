@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private ExpandableListView drawerList;
     private CheckBox checkBox;
     private ActionBarDrawerToggle actionBarDrawerToggle;
+    FragmentTransaction fragmentTransaction;
 
 
     private FrameLayout parentFrameLayout;
@@ -199,11 +200,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
     @Override
-    public void onBackPressed(){
-        int count = getFragmentManager().getBackStackEntryCount(); // if stack count is 0, it means no fragment left to pop back stack
-        if (count == 0) {
-            finish();
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() > 0 ){
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
         }
     }
 
@@ -212,8 +215,8 @@ public class MainActivity extends AppCompatActivity {
     private void setFragment(Fragment fragment)
     {
 
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
+        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.fui_slide_in_right, R.anim.fui_slide_out_left);
         fragmentTransaction.replace(parentFrameLayout.getId(),fragment);
         fragmentTransaction.commit();
 
