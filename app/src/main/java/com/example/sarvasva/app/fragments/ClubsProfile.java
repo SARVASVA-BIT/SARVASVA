@@ -32,6 +32,7 @@ public class ClubsProfile extends Fragment {
     public List<HorizontalItemModel> horizontalList;
     private RecyclerView photoGalleryRv;
     private Button viewAllGallery;
+    FragmentTransaction fragmentTransaction;
 
     public ClubsProfile() {
         // Required empty public constructor
@@ -44,7 +45,12 @@ public class ClubsProfile extends Fragment {
         View view = inflater.inflate(R.layout.fragment_club_profile, container, false);
         photoGalleryRv = view.findViewById(R.id.photoGalleryRv);
         viewAllGallery = view.findViewById(R.id.viewAllPhotoBtn);
-
+        viewAllGallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeFragment(new viewall());
+            }
+        });
         return view;
     }
     @Override
@@ -76,5 +82,12 @@ public class ClubsProfile extends Fragment {
 //        adapter.notifyDataSetChanged();
 
 
+    }
+
+    private void changeFragment(Fragment fragment) {
+        fragmentTransaction = getParentFragmentManager().beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.fui_slide_in_right,R.anim.fui_slide_out_left);
+        fragmentTransaction.replace(R.id.main_activity_frame_layout, fragment);
+        fragmentTransaction.addToBackStack(null).commit();
     }
 }

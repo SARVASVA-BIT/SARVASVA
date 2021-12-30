@@ -14,14 +14,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:text="Campus Directory"
-            android:textColor="@color/black"
+            android:textColor="@color/teal_900"
             android:textSize="35dp"
             android:textStyle="bold"
             android:padding="2dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="25dp"
+            android:layout_margin="16dp"
             >
         </TextView>
 
@@ -44,12 +42,18 @@
                 app:cardUseCompatPadding="true"
                 card_view:cardCornerRAdius="5dp">
                 <LinearLayout
+                    android:id="@+id/TopOfficial"
                     android:orientation="horizontal"
                     android:padding="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/directory"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
-                        android:id="@+id/TopOfficial"
                         android:text="Top Officials"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
@@ -74,12 +78,18 @@
                 app:cardUseCompatPadding="true"
                 card_view:cardCornerRAdius="5dp">
                 <LinearLayout
+                    android:id="@+id/dean"
                     android:orientation="horizontal"
                     android:padding="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/directory"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
-                        android:id="@+id/dean"
                         android:text="Deans"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
@@ -104,12 +114,18 @@
                 app:cardUseCompatPadding="true"
                 card_view:cardCornerRAdius="5dp">
                 <LinearLayout
+                    android:id="@+id/iqac"
                     android:orientation="horizontal"
                     android:padding="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/directory"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
-                            android:id="@+id/iqac"
                         android:text="Director IQAC"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
@@ -134,12 +150,18 @@
                 app:cardUseCompatPadding="true"
                 card_view:cardCornerRAdius="5dp">
                 <LinearLayout
+                    android:id="@+id/hod"
                     android:orientation="horizontal"
                     android:padding="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/directory"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
-                        android:id="@+id/hod"
                         android:text="HOD"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
@@ -164,12 +186,18 @@
                 app:cardUseCompatPadding="true"
                 card_view:cardCornerRAdius="5dp">
                 <LinearLayout
+                    android:id="@+id/associatedean"
                     android:orientation="horizontal"
                     android:padding="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/directory"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
-                        android:id="@+id/associatedean"
                         android:text="Associate Deans"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
@@ -194,12 +222,18 @@
                 app:cardUseCompatPadding="true"
                 card_view:cardCornerRAdius="5dp">
                 <LinearLayout
+                    android:id="@+id/administration"
                     android:orientation="horizontal"
                     android:padding="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/directory"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
-                        android:id="@+id/administration"
                         android:text="Administration"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
@@ -224,12 +258,18 @@
                 app:cardUseCompatPadding="true"
                 card_view:cardCornerRAdius="5dp">
                 <LinearLayout
+                    android:id="@+id/otherofficials"
                     android:orientation="horizontal"
                     android:padding="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/directory"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
-                        android:id="@+id/otherofficials"
                         android:text="Other Officials"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
@@ -254,13 +294,19 @@
                 app:cardUseCompatPadding="true"
                 card_view:cardCornerRAdius="5dp">
                 <LinearLayout
+                    android:id="@+id/accountandpur"
                     android:orientation="horizontal"
                     android:padding="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/directory"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
-                        android:id="@+id/accountandpur"
-                        android:text="Accounts AND Purchase"
+                        android:text="Accounts And Purchase"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
                         android:textSize="25dp"
@@ -284,12 +330,18 @@
                 app:cardUseCompatPadding="true"
                 card_view:cardCornerRAdius="5dp">
                 <LinearLayout
+                    android:id="@+id/dispensary"
                     android:orientation="horizontal"
                     android:padding="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/directory"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
-                        android:id="@+id/dispensary"
                         android:text="Dispensary"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
@@ -314,43 +366,19 @@
                 app:cardUseCompatPadding="true"
                 card_view:cardCornerRAdius="5dp">
                 <LinearLayout
+                    android:id="@+id/warden"
                     android:orientation="horizontal"
                     android:padding="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="2dp"
+                        android:src="@drawable/directory"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"/>
                     <TextView
-                        android:id="@+id/warden"
                         android:text="Hostel Warden"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="00dp"
-                        android:textSize="25dp"
-                        android:textStyle="bold"
-                        android:layout_gravity="center"
-                        android:textColor="#605E5E"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:card_view="http://schemas.android.com/tools"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="10dp"
-                app:cardUseCompatPadding="true"
-                card_view:cardCornerRAdius="5dp">
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:padding="3dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/examination"
-                        android:text="Examination"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="00dp"
                         android:textSize="25dp"

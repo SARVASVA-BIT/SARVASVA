@@ -173,6 +173,7 @@
 
 
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/club_gallery"
                 android:layout_width="match_parent"
@@ -230,8 +231,8 @@
                         android:id="@+id/photoGalleryRv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:elevation="4dp"
-                        android:background="@color/white"
+                        android:layout_margin="8dp"
+                        android:background="@color/teal_50"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
