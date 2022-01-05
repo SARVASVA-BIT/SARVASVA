@@ -25,6 +25,7 @@ import com.example.sarvasva.app.fragments.Colledge_directory_page;
 import com.example.sarvasva.app.fragments.UserProfile;
 
 import com.example.sarvasva.app.fragments.Announcements;
+import com.example.sarvasva.app.fragments.aboutus;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 //import com.google.firebase.auth.FirebaseAuth;
@@ -158,6 +159,9 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent2 = new Intent(MainActivity.this , WebVIiewERP.class);
                         startActivity(intent2);
                         finish();
+                        break;
+                    case R.id.nav_AboutUs:
+                        setFragment(new aboutus());
                         break;
 
                     default:

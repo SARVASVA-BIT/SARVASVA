@@ -110,6 +110,7 @@
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
                             <TextView
+                                android:id="@+id/arch_hod_mail"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_email"
