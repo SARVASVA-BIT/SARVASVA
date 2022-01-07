@@ -1,13 +1,11 @@
 package com.example.sarvasva.app.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -15,15 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.Toast;
+import android.widget.ImageView;
 
 import com.example.sarvasva.R;
 import com.example.sarvasva.app.Classes.HorizontalItemModel;
-import com.example.sarvasva.app.Classes.HorizontalProductAdaptor;
-import com.example.sarvasva.app.activities.MainActivity;
-import com.example.sarvasva.app.activities.ViewAllActivity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ClubsProfile extends Fragment {
@@ -33,6 +27,7 @@ public class ClubsProfile extends Fragment {
     private RecyclerView photoGalleryRv;
     private Button viewAllGallery;
     FragmentTransaction fragmentTransaction;
+    ImageView Settings;
 
     public ClubsProfile() {
         // Required empty public constructor
@@ -45,6 +40,13 @@ public class ClubsProfile extends Fragment {
         View view = inflater.inflate(R.layout.fragment_club_profile, container, false);
         photoGalleryRv = view.findViewById(R.id.photoGalleryRv);
         viewAllGallery = view.findViewById(R.id.viewAllPhotoBtn);
+        Settings = view.findViewById(R.id.club_settings);
+        Settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeFragment(new president_edit());
+            }
+        });
         viewAllGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
