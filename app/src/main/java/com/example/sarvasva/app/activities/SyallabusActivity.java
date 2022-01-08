@@ -1,27 +1,17 @@
 package com.example.sarvasva.app.activities;
 
-import static android.content.ContentValues.TAG;
 import static java.lang.String.valueOf;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.example.sarvasva.R;
-import com.example.sarvasva.app.Classes.HorizontalSliderAdapter;
-import com.example.sarvasva.app.fragments.LoginFragment;
-import com.example.sarvasva.app.fragments.SyllabusFragment;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -30,10 +20,8 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class SyallabusActivity extends AppCompatActivity {
@@ -49,8 +37,10 @@ public class SyallabusActivity extends AppCompatActivity {
    private ArrayAdapter<String>adapterCourse ,  adapterBranch , adapterSem , adapterSubject;
    private ArrayList<String> course ;
    private ArrayList<String> BTECH , BARCH , BBA ;
-   private ArrayList<String> CSE , ECE , EEE , BARCHBranch , BBABranch;
-   private ArrayList<String> CSEsem1 , CSEsem2 , ECEsem1 ,ECEsem2 , EEEsem1 , BARCHsem1 , BBAsem1;
+   private ArrayList<String> CSE , ECE , IT , MECH, EEE, Chemical,Production, Biotech , BARCHBranch , BBABranch;
+   private ArrayList<String> CSEsem1 , CSEsem2 , ECEsem1 ,ECEsem2 , EEEsem1 ,EEEsem2, ITsem1 , ITsem2 , MECHsem1 , MECHsem2,
+           Productionsem1 , Productionsem2 , Biotechsem1 , Biotechsem2 ,
+           Chemicalsem1  , Chemicalsem2 , BARCHsem1 , BBAsem1;
    private ArrayList<String> Tensem , Sixsem , Eightsem ;
 
    private FirebaseFirestore firestore;
@@ -170,6 +160,16 @@ public class SyallabusActivity extends AppCompatActivity {
         CSE.add("SEM7");
         CSE.add("SEM8");
 
+        EEE = new ArrayList<>();
+        EEE.add("SEM1");
+        EEE.add("SEM2");
+        EEE.add("SEM3");
+        EEE.add("SEM4");
+        EEE.add("SEM5");
+        EEE.add("SEM6");
+        EEE.add("SEM7");
+        EEE.add("SEM8");
+
         ECE = new ArrayList<>();
         ECE.add("SEM1");
         ECE.add("SEM2");
@@ -179,6 +179,58 @@ public class SyallabusActivity extends AppCompatActivity {
         ECE.add("SEM6");
         ECE.add("SEM7");
         ECE.add("SEM8");
+
+        IT = new ArrayList<>();
+        IT.add("SEM1");
+        IT.add("SEM2");
+        IT.add("SEM3");
+        IT.add("SEM4");
+        IT.add("SEM5");
+        IT.add("SEM6");
+        IT.add("SEM7");
+        IT.add("SEM8");
+
+        MECH = new ArrayList<>();
+        MECH.add("SEM1");
+        MECH.add("SEM2");
+        MECH.add("SEM3");
+        MECH.add("SEM4");
+        MECH.add("SEM5");
+        MECH.add("SEM6");
+        MECH.add("SEM7");
+        MECH.add("SEM8");
+
+        Chemical = new ArrayList<>();
+        Chemical.add("SEM1");
+        Chemical.add("SEM2");
+        Chemical.add("SEM3");
+        Chemical.add("SEM4");
+        Chemical.add("SEM5");
+        Chemical.add("SEM6");
+        Chemical.add("SEM7");
+        Chemical.add("SEM8");
+
+
+        Production = new ArrayList<>();
+        Production.add("SEM1");
+        Production.add("SEM2");
+        Production.add("SEM3");
+        Production.add("SEM4");
+        Production.add("SEM5");
+        Production.add("SEM6");
+        Production.add("SEM7");
+        Production.add("SEM8");
+
+        Biotech = new ArrayList<>();
+        Biotech.add("SEM1");
+        Biotech.add("SEM2");
+        Biotech.add("SEM3");
+        Biotech.add("SEM4");
+        Biotech.add("SEM5");
+        Biotech.add("SEM6");
+        Biotech.add("SEM7");
+        Biotech.add("SEM8");
+
 
         BARCHBranch = new ArrayList<>();
         BARCHBranch.add("SEM1");
@@ -228,25 +280,160 @@ public class SyallabusActivity extends AppCompatActivity {
         CSEsem1.add("BECE");
         CSEsem1.add("Chemistry");
         CSEsem1.add("Mathematics I");
+        CSEsem1.add("BME");
+        CSEsem1.add("Chemistry lab");
+        CSEsem1.add("Electronics and Communication lab");
+        CSEsem1.add("Engineering Graphics lab");
+
 
         CSEsem2 = new ArrayList<>();
         CSEsem2.add("Mathematics II");
         CSEsem2.add("Physics");
         CSEsem2.add("Programming for problem Solving");
+        CSEsem2.add("BEE");
+        CSEsem2.add("Physics Lab");
+        CSEsem2.add("Programming for problem Solving Lab");
+        CSEsem2.add("Workshop Practice");
 
         ECEsem1 = new ArrayList<>();
         ECEsem1.add("BECE");
         ECEsem1.add("Chemistry");
         ECEsem1.add("Mathematics I");
+        ECEsem1.add("BME");
+        ECEsem1.add("Chemistry lab");
+        ECEsem1.add("Electronics and Communication lab");
+        ECEsem1.add("Engineering Graphics lab");
+
 
         ECEsem2 = new ArrayList<>();
         ECEsem2.add("Mathematics II");
         ECEsem2.add("Physics");
         ECEsem2.add("Programming for problem Solving");
+        ECEsem2.add("BEE");
+        ECEsem2.add("Physics Lab");
+        ECEsem2.add("Programming for problem Solving Lab");
+        ECEsem2.add("Workshop Practice");
+
+        EEEsem1 = new ArrayList<>();
+        EEEsem1.add("BECE");
+        EEEsem1.add("Chemistry");
+        EEEsem1.add("Mathematics I");
+        EEEsem1.add("BME");
+        EEEsem1.add("Chemistry lab");
+        EEEsem1.add("Electronics and Communication lab");
+        EEEsem1.add("Engineering Graphics lab");
+
+
+        EEEsem2 = new ArrayList<>();
+        EEEsem2.add("Mathematics II");
+        EEEsem2.add("Physics");
+        EEEsem2.add("Programming for problem Solving");
+        EEEsem2.add("BEE");
+        EEEsem2.add("Physics Lab");
+        EEEsem2.add("Programming for problem Solving Lab");
+        EEEsem2.add("Workshop Practice");
+
+        ITsem1 = new ArrayList<>();
+        ITsem1.add("BECE");
+        ITsem1.add("Chemistry");
+        ITsem1.add("Mathematics I");
+        ITsem1.add("BME");
+        ITsem1.add("Chemistry lab");
+        ITsem1.add("Electronics and Communication lab");
+        ITsem1.add("Engineering Graphics lab");
+
+
+        ITsem2 = new ArrayList<>();
+        ITsem2.add("Mathematics II");
+        ITsem2.add("Physics");
+        ITsem2.add("Programming for problem Solving");
+        ITsem2.add("BEE");
+        ITsem2.add("Physics Lab");
+        ITsem2.add("Programming for problem Solving Lab");
+        ITsem2.add("Workshop Practice");
 
 
 
-        spinnerSem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        MECHsem1 = new ArrayList<>();
+        MECHsem1.add("BECE");
+        MECHsem1.add("Chemistry");
+        MECHsem1.add("Mathematics I");
+        MECHsem1.add("BME");
+        MECHsem1.add("Chemistry lab");
+        MECHsem1.add("Electronics and Communication lab");
+        MECHsem1.add("Engineering Graphics lab");
+
+
+        MECHsem2 = new ArrayList<>();
+        MECHsem2.add("Mathematics II");
+        MECHsem2.add("Physics");
+        MECHsem2.add("Programming for problem Solving");
+        MECHsem2.add("BEE");
+        MECHsem2.add("Physics Lab");
+        MECHsem2.add("Programming for problem Solving Lab");
+        MECHsem2.add("Workshop Practice");
+
+
+
+        Productionsem1 = new ArrayList<>();
+        Productionsem1.add("BECE");
+        Productionsem1.add("Chemistry");
+        Productionsem1.add("Mathematics I");
+        Productionsem1.add("BME");
+        Productionsem1.add("Chemistry lab");
+        Productionsem1.add("Electronics and Communication lab");
+        Productionsem1.add("Engineering Graphics lab");
+
+
+        Productionsem2 = new ArrayList<>();
+        Productionsem2.add("Mathematics II");
+        Productionsem2.add("Physics");
+        Productionsem2.add("Programming for problem Solving");
+        Productionsem2.add("BEE");
+        Productionsem2.add("Physics Lab");
+        Productionsem2.add("Programming for problem Solving Lab");
+        Productionsem2.add("Workshop Practice");
+        Biotechsem1 = new ArrayList<>();
+        Biotechsem1.add("BECE");
+        Biotechsem1.add("Chemistry");
+        Biotechsem1.add("Mathematics I");
+        Biotechsem1.add("BME");
+        Biotechsem1.add("Chemistry lab");
+        Biotechsem1.add("Electronics and Communication lab");
+        Biotechsem1.add("Engineering Graphics lab");
+
+
+        Biotechsem2 = new ArrayList<>();
+        Biotechsem2.add("Mathematics II");
+        Biotechsem2.add("Physics");
+        Biotechsem2.add("Programming for problem Solving");
+        Biotechsem2.add("BEE");
+        Biotechsem2.add("Physics Lab");
+        Biotechsem2.add("Programming for problem Solving Lab");
+        Biotechsem2.add("Workshop Practice");
+
+
+        Chemicalsem1 = new ArrayList<>();
+        Chemicalsem1.add("BECE");
+        Chemicalsem1.add("Chemistry");
+        Chemicalsem1.add("Mathematics I");
+        Chemicalsem1.add("BME");
+        Chemicalsem1.add("Chemistry lab");
+        Chemicalsem1.add("Electronics and Communication lab");
+        Chemicalsem1.add("Engineering Graphics lab");
+
+
+        Chemicalsem2 = new ArrayList<>();
+        Chemicalsem2.add("Mathematics II");
+        Chemicalsem2.add("Physics");
+        Chemicalsem2.add("Programming for problem Solving");
+        Chemicalsem2.add("BEE");
+        Chemicalsem2.add("Physics Lab");
+        Chemicalsem2.add("Programming for problem Solving Lab");
+        Chemicalsem2.add("Workshop Practice");
+
+
+              spinnerSem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 selectedSem = spinnerSem.getSelectedItem().toString().trim()+"";
