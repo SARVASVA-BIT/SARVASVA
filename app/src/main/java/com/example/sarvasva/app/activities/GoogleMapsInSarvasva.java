@@ -2,9 +2,11 @@ package com.example.sarvasva.app.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -12,6 +14,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,25 +31,33 @@ import java.util.Objects;
 
 public class GoogleMapsInSarvasva extends AppCompatActivity {
 
+
     private FusedLocationProviderClient client;
     private SupportMapFragment mapFragment;
     private int REQUEST_CODE=111;
 
+
+    //private Toolbar GoogleMap = findViewById(R.id.Google_Map);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google_maps_in_sarvasva);
 
-        String title = "MAP";
-        Objects.requireNonNull(getSupportActionBar()).setTitle(title);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary)));
+        //setupActionBar();
+       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        String title = "MAP";
+//        Objects.requireNonNull(getSupportActionBar()).setTitle(title);
+//        getSupportActionBar().setDisplayShowTitleEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary)));
+
+
+
 
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.maps);
-
-
+        //String title =  "MAPS";
+        //getActionBar().getTitle(title);
         client = LocationServices.getFusedLocationProviderClient(this);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
                 &&  ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
@@ -102,24 +113,30 @@ public class GoogleMapsInSarvasva extends AppCompatActivity {
         });
     }
 
-
-
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this , MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == android.R.id.home)
-        {
-            Intent intent = new Intent(this , MainActivity.class);
-            startActivity(intent);
-            finish();
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//
+//    public void setupActionBar(){
+//        setSupportActionBar(GoogleMap);
+//        ActionBar actionBar =null;
+//        if(actionBar!=null){
+//            actionBar.setDisplayHomeAsUpEnabled(true);
+//            actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
+//        }
+//        GoogleMap.setNavigationOnClickListener(view -> {
+//            {
+//                Intent intent1 = new Intent(GoogleMapsInSarvasva.this , MainActivity.class);
+//                startActivity(intent1);
+//                finish();
+//            }
+//        });
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        if (item.getItemId() == android.R.id.home)
+//        {
+//            this.finish();
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
 }
