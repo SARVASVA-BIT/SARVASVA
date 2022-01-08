@@ -26,9 +26,11 @@ import android.widget.Toast;
 import com.example.sarvasva.R;
 import com.example.sarvasva.app.fragments.ClubDirectory;
 import com.example.sarvasva.app.fragments.Colledge_directory_page;
+import com.example.sarvasva.app.fragments.HomeFragment;
 import com.example.sarvasva.app.fragments.UserProfile;
 
 import com.example.sarvasva.app.fragments.Announcements;
+import com.example.sarvasva.app.fragments.WebVliewERP;
 import com.example.sarvasva.app.fragments.aboutus;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -74,7 +76,9 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setItemIconTintList(null);
-        setFragment(new Announcements());
+
+
+        setFragment(new HomeFragment());
 
 
         navHeader = navigationView.getHeaderView(0);
@@ -160,16 +164,14 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.nav_MAPS:
-                        Toast.makeText(MainActivity.this, "Map button is working" , Toast.LENGTH_SHORT).show();
+
                         Intent intent1 = new Intent(MainActivity.this , GoogleMapsInSarvasva.class);
                         startActivity(intent1);
                         finish();
                         break;
 
                     case R.id.nav_ERP:
-                        Intent intent2 = new Intent(MainActivity.this , WebVIiewERP.class);
-                        startActivity(intent2);
-                        finish();
+                        goToFragment(new WebVliewERP() , "ERP");
                         break;
 
                     case R.id.nav_DIRECTORY:

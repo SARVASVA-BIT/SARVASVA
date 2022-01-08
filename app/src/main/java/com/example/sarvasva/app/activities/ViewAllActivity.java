@@ -21,7 +21,8 @@ public class ViewAllActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_all);
-
+//        activity_web_viiew_erp
+//        "https://erp.bitmesra.ac.in/iitmsv4eGq0RuNHb0G5WbhLmTKLmTO7YBcJ4RHuXxCNPvuIw=?enc=EGbCGWnlHNJ/WdgJnKH8DA=="
         recyclerView = findViewById(R.id.viewAllRv);
 
         layoutTitle =getIntent().getStringExtra("layout_title");

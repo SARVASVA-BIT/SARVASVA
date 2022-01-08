@@ -89,10 +89,10 @@ public class SyallabusActivity extends AppCompatActivity {
         course.add("BBA");
 
         String title = "SYLLABUS";
-        Objects.requireNonNull(getSupportActionBar()).setTitle(title);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary)));
+//        Objects.requireNonNull(getSupportActionBar()).setTitle(title);
+//        getSupportActionBar().setDisplayShowTitleEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary)));
 
 
 
@@ -106,8 +106,8 @@ public class SyallabusActivity extends AppCompatActivity {
         BTECH.add("CSE");
         BTECH.add("ECE");
         BTECH.add("IT");
-        BTECH.add("MECH");
         BTECH.add("EEE");
+        BTECH.add("MECH");
         BTECH.add("CHEMICAL");
         BTECH.add("PRODUCTION");
         BTECH.add("BIOTECH");
@@ -256,7 +256,37 @@ public class SyallabusActivity extends AppCompatActivity {
                 }
                 if (selectedBranch.equalsIgnoreCase(BTECH.get(1)))
                 {
-                    adapterSem = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item , ECE);
+                    adapterSem = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item , CSE);
+
+                }
+                if (selectedBranch.equalsIgnoreCase(BTECH.get(2)))
+                {
+                    adapterSem = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item , CSE);
+
+                }
+                if (selectedBranch.equalsIgnoreCase(BTECH.get(3)))
+                {
+                    adapterSem = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item , CSE);
+
+                }
+                if (selectedBranch.equalsIgnoreCase(BTECH.get(4)))
+                {
+                    adapterSem = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item , MECH);
+
+                }
+                if (selectedBranch.equalsIgnoreCase(BTECH.get(5)))
+                {
+                    adapterSem = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item , MECH);
+
+                }
+                if (selectedBranch.equalsIgnoreCase(BTECH.get(6)))
+                {
+                    adapterSem = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item , MECH);
+
+                }
+                if (selectedBranch.equalsIgnoreCase(BTECH.get(7)))
+                {
+                    adapterSem = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item , MECH);
 
                 }
                 if (selectedBranch.equalsIgnoreCase(BARCH.get(0)))
@@ -393,6 +423,7 @@ public class SyallabusActivity extends AppCompatActivity {
         Productionsem2.add("Physics Lab");
         Productionsem2.add("Programming for problem Solving Lab");
         Productionsem2.add("Workshop Practice");
+
         Biotechsem1 = new ArrayList<>();
         Biotechsem1.add("BECE");
         Biotechsem1.add("Chemistry");
@@ -448,16 +479,17 @@ public class SyallabusActivity extends AppCompatActivity {
                     adapterSubject = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item , CSEsem2);
 
                 }
-                if (selectedSem.equalsIgnoreCase(ECE.get(0)))
+                if (selectedSem.equalsIgnoreCase(CSE.get(1)))
                 {
-                    adapterSubject = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item , ECEsem1);
+                    adapterSubject = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item , CSEsem2);
 
                 }
-                if (selectedSem.equalsIgnoreCase(ECE.get(1)))
+                if (selectedSem.equalsIgnoreCase(CSE.get(1)))
                 {
-                    adapterSubject = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item , ECEsem2);
+                    adapterSubject = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item , CSEsem2);
 
                 }
+
                 adapterSubject.notifyDataSetChanged();
                 spinnerSubject.setAdapter(adapterSubject);
             }
@@ -500,16 +532,11 @@ public class SyallabusActivity extends AppCompatActivity {
     }
 
 
-
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == android.R.id.home)
-        {
-            Intent intent = new Intent(this , MainActivity.class);
-            startActivity(intent);
-            finish();
-        }
-        return super.onOptionsItemSelected(item);
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(SyallabusActivity.this , MainActivity.class);
+        startActivity(intent);
+        finish();
     }
-
 }

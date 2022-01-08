@@ -7,6 +7,7 @@ import android.content.Intent;
 
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -51,7 +52,8 @@ public class ClubsProfile extends Fragment {
     private FrameLayout parentFrameLayout;
     private RecyclerView photoGalleryRv;
     private Button viewAllGallery;
-    private TextView presidentTv , jointPresidentTv, vicePresidentTv, extraPresidentTv , firstHeadTv, secondHeadTv, thirdHeadTv, fourthHeadTv;
+    private TextView presidentTv , jointPresidentTv, vicePresidentTv, extraPresidentTv
+            , firstHeadTv, secondHeadTv, thirdHeadTv, fourthHeadTv;
     private String president , jointPresident, vicePresident, extraPresident;
     private List<String> posterUrlList;
     private List<String> productImagesList = new ArrayList<>();
@@ -66,8 +68,8 @@ public class ClubsProfile extends Fragment {
 
 
     FragmentTransaction fragmentTransaction;
-    ImageView Settings;
 
+    ImageView Settings;
     public ClubsProfile() {
         // Required empty public constructor
     }
@@ -82,10 +84,13 @@ public class ClubsProfile extends Fragment {
         jointPresidentTv = view.findViewById(R.id.club_joint_president);
         presidentTv = view.findViewById(R.id.club_president);
         vicePresidentTv = view.findViewById(R.id.club_vice_president);
+        extraPresidentTv = view.findViewById(R.id.club_extra_vice_president);
 
-        CardView card = view.findViewById(R.id.edc_vicepresident2);
-        card.setVisibility(View.INVISIBLE);
+
         viewAllGallery = view.findViewById(R.id.viewAllPhotoBtn);
+
+
+
         Settings = view.findViewById(R.id.club_settings);
         Settings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +98,18 @@ public class ClubsProfile extends Fragment {
                 changeFragment(new president_edit());
             }
         });
+
+        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+            @Override
+            public void handleOnBackPressed() {
+                // Handle the back button event
+               changeFragment(new ClubDirectory());
+
+            }
+        };
+        requireActivity().getOnBackPressedDispatcher().addCallback(getActivity(), callback);
+
+
         viewAllGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -136,13 +153,14 @@ public class ClubsProfile extends Fragment {
                         president = (String)shot.get("PRESIDENT");
                         jointPresident = (String)shot.get("JOINT PRESIDENT");
                         vicePresident = (String)shot.get("VICE PRESIDENT");
+                        extraPresident = (String)shot.get("SECOND VICE PRESIDENT");
 
                         //setting the data
 
                         presidentTv.setText(president);
                         vicePresidentTv.setText(vicePresident);
                         jointPresidentTv.setText(jointPresident);
-
+                        extraPresidentTv.setText(extraPresident);
                         //end setting data
 
                         //setting adapter

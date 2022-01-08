@@ -44,20 +44,10 @@ public class GoogleMapsInSarvasva extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google_maps_in_sarvasva);
 
-        //setupActionBar();
-       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        String title = "MAP";
-//        Objects.requireNonNull(getSupportActionBar()).setTitle(title);
-//        getSupportActionBar().setDisplayShowTitleEnabled(true);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary)));
-
 
 
 
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.maps);
-        //String title =  "MAPS";
-        //getActionBar().getTitle(title);
         client = LocationServices.getFusedLocationProviderClient(this);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
                 &&  ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
@@ -79,7 +69,7 @@ public class GoogleMapsInSarvasva extends AppCompatActivity {
                 getCurrentLocation();
             }
         } else {
-            Toast.makeText(this, "PERMISSION DINIED", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "PERMISSION DENIED", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -106,37 +96,20 @@ public class GoogleMapsInSarvasva extends AppCompatActivity {
                         googleMap.addMarker(markerOptions).showInfoWindow();
                     });
                 } else {
-                    Toast.makeText(GoogleMapsInSarvasva.this, "Please turn on your GPS", Toast.LENGTH_LONG).show();
+                    Toast.makeText(GoogleMapsInSarvasva.this, "Please turn on your GPS and Re-Start Map", Toast.LENGTH_LONG).show();
                 }
             }
 
         });
     }
 
-//
-//    public void setupActionBar(){
-//        setSupportActionBar(GoogleMap);
-//        ActionBar actionBar =null;
-//        if(actionBar!=null){
-//            actionBar.setDisplayHomeAsUpEnabled(true);
-//            actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24);
-//        }
-//        GoogleMap.setNavigationOnClickListener(view -> {
-//            {
-//                Intent intent1 = new Intent(GoogleMapsInSarvasva.this , MainActivity.class);
-//                startActivity(intent1);
-//                finish();
-//            }
-//        });
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        if (item.getItemId() == android.R.id.home)
-//        {
-//            this.finish();
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(GoogleMapsInSarvasva.this , MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

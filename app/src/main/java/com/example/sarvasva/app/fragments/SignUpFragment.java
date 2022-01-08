@@ -71,7 +71,7 @@ public class SignUpFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sign_up, container, false);
-        closeBtn = view.findViewById(R.id.closeBtn);
+//        closeBtn = view.findViewById(R.id.closeBtn);
         loginBtn = view.findViewById(R.id.loginBtn);
         emailEt = view.findViewById(R.id.emailEt);
         passwordEt = view.findViewById(R.id.passEt);
@@ -299,15 +299,15 @@ public class SignUpFragment extends Fragment {
             }
         });
 
-        closeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MainActivity.class);
-                startActivity(intent);
-                getActivity().finish();
-
-            }
-        });
+//        closeBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getContext(), MainActivity.class);
+//                startActivity(intent);
+//                getActivity().finish();
+//
+//            }
+//        });
     }
 
     private void checkInputs() {

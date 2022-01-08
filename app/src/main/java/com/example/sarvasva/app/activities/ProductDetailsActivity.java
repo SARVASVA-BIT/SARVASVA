@@ -41,10 +41,10 @@ public class ProductDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_product_details);
 
         String title = "ALL PHOTOS";
-        Objects.requireNonNull(getSupportActionBar()).setTitle(title);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary)));
+//        getSupportActionBar().setTitle(title);
+//        getSupportActionBar().setDisplayShowTitleEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary)));
 
         productImagesList = new ArrayList<>();
         pager = findViewById(R.id.productImageViewPager);
