@@ -3,6 +3,7 @@ package com.example.sarvasva.app.fragments.clubProfiles;
 import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -59,10 +60,17 @@ public class GDSC extends Fragment {
             clubAbout, firstHead, secondHead, thirdHead, fourthHead;
 
 
+    private ImageView link1Iv,link2Iv , link3Iv , link4Iv;
+    private String  link1 , link2, link3 , link4;
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
+    }
 
     private TextView clubNameTv ,clubAnnouncementTv , firstHeadTv, secondHeadTv, thirdHeadTv, fourthHeadTv,
             clubAboutTv , presidentTv , jointPresidentTv, vicePresidentTv, extraPresidentTv ;
     private ImageView clubDp , clubBackground;
+
 
 
     public GDSC() {
@@ -85,6 +93,14 @@ public class GDSC extends Fragment {
             }
         };
         requireActivity().getOnBackPressedDispatcher().addCallback(getActivity(), callback);
+
+
+        link1Iv= view.findViewById(R.id.president_lkdin);
+        link2Iv= view.findViewById(R.id.jointpresident_lkdin);
+        link3Iv= view.findViewById(R.id.vicepresident_lkdin);
+
+        link4Iv= view.findViewById(R.id.extrapresident_lkdin);
+
 
         photoGalleryRv = view.findViewById(R.id.horizontalScrollRecycleView);
         viewAllGallery = view.findViewById(R.id.viewAllPhotoBtn);
@@ -172,6 +188,41 @@ public class GDSC extends Fragment {
                         extraVicePresident =  (String)shot.get("Girls Tech Lead");
                         clubAbout = (String)shot.get("ABOUT");
                         //setting the data
+
+
+                        link1 =  (String)shot.get("LINK1");
+                        link2 =  (String)shot.get("LINK2");
+                        link3 =  (String)shot.get("LINK3");
+                        link4 =  (String)shot.get("LINK4");
+                        //setting the data
+                        link1Iv.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl(link1);
+                            }
+                        });
+                        link2Iv.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl(link2);
+                            }
+                        });
+                        link3Iv.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl(link3);
+                            }
+                        });
+                        link4Iv.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl(link4);
+                            }
+                        });
+
+
+
+
 
                         presidentTv.setText(president);
                         vicePresidentTv.setText(vicePresident);
