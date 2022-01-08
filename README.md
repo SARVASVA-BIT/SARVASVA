@@ -1,3 +1,11 @@
+TEAM DETAILS:
+- Team Name: PtaNahiYaar
+- Team Members:
+- - Rahul Srivastava 
+- - Sudhanshu Ranjan
+- - Aryank Upadhyay
+
+
 DOMAIN:
 Android App Development
 
@@ -12,5 +20,6 @@ ACHIEVEMENTS:
 - Users have a auto-generated user-profile page which can be used as a medium to share one's info related to college with friends.
 
 HOW TO USE:
+- Built with Android with Java and Firebase.
 - The source code provided can be imported into the Android Studio software and then run on an emulator or attached physical device.
 - Alternatively, a link to the App's APK will be attached here. That APK file can directly be downloaded and installed into an android mobile phone and the app will start functioning.
