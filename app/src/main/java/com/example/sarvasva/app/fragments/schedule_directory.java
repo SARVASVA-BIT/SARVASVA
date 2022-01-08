@@ -13,11 +13,15 @@ import android.view.ViewGroup;
 
 import com.example.sarvasva.R;
 import com.example.sarvasva.app.activities.MainActivity;
+import com.github.chrisbanes.photoview.PhotoView;
 
 public class schedule_directory extends Fragment {
 
     FragmentTransaction fragmentTransaction;
 
+
+//    PhotoView photoView = findViewById(R.id.photo_view);
+//    photoView.setImageResource(R.drawable.image);
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
