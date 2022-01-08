@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/primary"
 
     tools:context=".app.fragments.SignUpFragment">
@@ -56,6 +61,42 @@
         app:layout_constraintTop_toBottomOf="@+id/fullNameEt" />
 
     <EditText
+        android:id="@+id/collegeRollNumEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="Enter Roll Number (BTECH/10XXX/XX)"
+        android:textColor="@color/white"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/teal_900"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailEt"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/branchEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="Enter Branch Name"
+        android:textColor="@color/white"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/teal_900"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/collegeRollNumEt"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
         android:id="@+id/mobileNumber"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -66,9 +107,9 @@
         android:layout_marginTop="16dp"
         android:inputType="phone"
         android:textColorHint="@color/teal_900"
-        app:layout_constraintEnd_toEndOf="@+id/emailEt"
-        app:layout_constraintStart_toStartOf="@+id/emailEt"
-        app:layout_constraintTop_toBottomOf="@+id/emailEt" />
+        app:layout_constraintEnd_toEndOf="@+id/branchEt"
+        app:layout_constraintStart_toStartOf="@+id/branchEt"
+        app:layout_constraintTop_toBottomOf="@+id/branchEt" />
 
     <EditText
         android:id="@+id/passEt"
@@ -203,3 +244,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

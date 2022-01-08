@@ -19,6 +19,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.sarvasva.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 //import com.google.android.gms.tasks.OnCompleteListener;
 //import com.google.android.gms.tasks.Task;
 //import com.google.firebase.auth.FirebaseAuth;
@@ -31,7 +34,7 @@ private TextView goBackBtn;
 private FrameLayout parentFrameLayout;
 private EditText emailEt;
 private Button resetBtn;
-//private FirebaseAuth firebaseAuth;
+private FirebaseAuth firebaseAuth;
 private ProgressBar progressBar;
 
 
@@ -64,7 +67,7 @@ private ProgressBar progressBar;
     @Override
     public void onViewCreated(@NonNull  View view, @Nullable  Bundle savedInstanceState) {
 
-//        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
         parentFrameLayout = requireActivity().findViewById(R.id.frameLayoutAuth);
         goBackBtn.setOnClickListener(new View.OnClickListener() {
@@ -86,30 +89,30 @@ private ProgressBar progressBar;
                     resetBtn.setEnabled(false);
                     resetBtn.setText("");
 
-//                    firebaseAuth.sendPasswordResetEmail(emailEt.getText().toString().trim()).addOnCompleteListener(new OnCompleteListener<Void>() {
-//                        @Override
-//                        public void onComplete(@NonNull Task<Void> task) {
-//
-//                            if (task.isSuccessful()) {
-//
-//                                Toast.makeText(getContext() , "Email Sent Successfully. Check Span Folder" , Toast.LENGTH_LONG).show();
-//
-//                            } else {
-//                                Toast.makeText(getContext() , "Something Went Wrong" +task.getException().getMessage() , Toast.LENGTH_LONG).show();
-//
-//                                progressBar.setVisibility(View.INVISIBLE);
-//                                resetBtn.setEnabled(true);
-//                                resetBtn.setText("Reset Password");
-//
-//
-//                            }
-//                            progressBar.setVisibility(View.INVISIBLE);
-//                            resetBtn.setEnabled(true);
-//                            resetBtn.setText("Reset Password");
-//
-//                        }
-//
-//                    });
+                    firebaseAuth.sendPasswordResetEmail(emailEt.getText().toString().trim()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+
+                            if (task.isSuccessful()) {
+
+                                Toast.makeText(getContext() , "Email Sent Successfully. Check Span Folder" , Toast.LENGTH_LONG).show();
+
+                            } else {
+                                Toast.makeText(getContext() , "Something Went Wrong" +task.getException().getMessage() , Toast.LENGTH_LONG).show();
+
+                                progressBar.setVisibility(View.INVISIBLE);
+                                resetBtn.setEnabled(true);
+                                resetBtn.setText("Reset Password");
+
+
+                            }
+                            progressBar.setVisibility(View.INVISIBLE);
+                            resetBtn.setEnabled(true);
+                            resetBtn.setText("Reset Password");
+
+                        }
+
+                    });
                 }
                 else
                 {

@@ -47,7 +47,7 @@ import java.util.Map;
 
 
 public class SignUpFragment extends Fragment {
-    private EditText emailEt , passwordEt , cnfPassEt, fullNameEt , mobileEt;
+    private EditText emailEt , passwordEt , cnfPassEt, fullNameEt , mobileEt , rollEt , branchEt;
     private Button signUpButton;
     private ImageView closeBtn;
     private TextView loginBtn;
@@ -80,6 +80,9 @@ public class SignUpFragment extends Fragment {
         fullNameEt = view.findViewById(R.id.fullNameEt);
         mobileEt = view.findViewById(R.id.mobileNumber);
         progressBar = view.findViewById(R.id.progBar);
+        rollEt = view.findViewById(R.id.collegeRollNumEt);
+        branchEt = view.findViewById(R.id.branchEt);
+
 
         return view;
 
@@ -211,6 +214,8 @@ public class SignUpFragment extends Fragment {
                                                 basicDetails.put("full name", fullNameEt.getText().toString());
                                                 basicDetails.put("mobile_no", mobileEt.getText().toString());
                                                 basicDetails.put("email", emailEt.getText().toString());
+                                                basicDetails.put("roll", rollEt.getText().toString());
+                                                basicDetails.put("branch", branchEt.getText().toString());
 
 
                                                 firestore.collection("USERS").document(fireBaseAuth.getUid()).set(basicDetails).addOnCompleteListener(task1 -> {

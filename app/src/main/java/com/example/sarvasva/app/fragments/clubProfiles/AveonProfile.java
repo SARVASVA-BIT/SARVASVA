@@ -1,16 +1,18 @@
 package com.example.sarvasva.app.fragments.clubProfiles;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,10 +24,8 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.sarvasva.R;
-import com.example.sarvasva.app.Classes.HorizontalItemModel;
-import com.example.sarvasva.app.Classes.HorizontalProductAdaptor;
-import com.example.sarvasva.app.activities.MainActivity;
-import com.example.sarvasva.app.activities.ViewAllActivity;
+import com.example.sarvasva.app.Classes.HorizontalSliderAdapter;
+import com.example.sarvasva.app.activities.ProductDetailsActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -37,11 +37,17 @@ import java.util.List;
 public class AveonProfile extends Fragment {
 
     private FrameLayout parentFrameLayout;
-    public List<HorizontalItemModel> horizontalList;
+
     public String aveonGallaryList ;
     private RecyclerView photoGalleryRv;
     private Button viewAllGallery;
-    private TextView clubName ,clubAnnouncement , clubAbout , clubPresident , clubJointPresident , clubVicePresident;
+
+    private String president , jointPresident, vicePresident , clubAbout, firstHead, secondHead, thirdHead, fourthHead;
+
+    private List<String> productImagesList = new ArrayList<>();
+    private FirebaseFirestore firestore;
+
+    private TextView clubNameTv ,clubAnnouncementTv , firstHeadTv, secondHeadTv, thirdHeadTv, fourthHeadTv,clubAboutTv , presidentTv , jointPresidentTv, vicePresidentTv, extraPresidentTv ;
     private ImageView clubDp , clubBackground;
 
 
@@ -54,32 +60,52 @@ public class AveonProfile extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_club_profile, container, false);
-        photoGalleryRv = view.findViewById(R.id.photoGalleryRv);
+
+
+        CardView card = view.findViewById(R.id.edc_vicepresident2);
+        card.setVisibility(View.INVISIBLE);
+
+
+        photoGalleryRv = view.findViewById(R.id.horizontalScrollRecycleView);
         viewAllGallery = view.findViewById(R.id.viewAllPhotoBtn);
         clubDp = view.findViewById(R.id.club_dp);
-        clubAnnouncement = view.findViewById(R.id.club_announcements);
-        clubAbout = view.findViewById(R.id.club_about);
-        clubJointPresident = view.findViewById(R.id.club_joint_president);
-        clubPresident = view.findViewById(R.id.club_president);
-        clubVicePresident = view.findViewById(R.id.club_vice_president);
-        clubName = view.findViewById(R.id.club_name);
+        clubAnnouncementTv = view.findViewById(R.id.club_announcements);
+        clubAboutTv = view.findViewById(R.id.club_about);
+        clubNameTv = view.findViewById(R.id.club_name);
         clubBackground = view.findViewById(R.id.club_cover);
 
 
+        firstHeadTv = view.findViewById(R.id.firstheadTV);
+        secondHeadTv = view.findViewById(R.id.secondHeadTv);
+        thirdHeadTv = view.findViewById(R.id.thirdHeadTv);
+        fourthHeadTv = view.findViewById(R.id.fourthHeadTv);
+        jointPresidentTv = view.findViewById(R.id.club_joint_president);
+        presidentTv = view.findViewById(R.id.club_president);
+        vicePresidentTv = view.findViewById(R.id.club_vice_president);
 
-        Glide.with(getContext())
-                .load(aveonGallaryList)
-                .placeholder(R.drawable.edc_logo)
-                .into(clubDp);
 
-        clubName.setText("AVEON");
-        clubAbout.setText("Racing Club");
-        clubAnnouncement.setText("New REcruiment Soon ");
-        clubJointPresident.setText("Mr. M Subhramanayam");
-        clubPresident.setText("Monjo");
-        clubVicePresident.setText("Rahul");
-//        clubDp.setImageResource(R.drawable.aveon_logo);
+
+
+        firstHeadTv.setText("Captain");
+        secondHeadTv.setText("Vice-Captain");
+        thirdHeadTv.setText("Vice-Captain");
+
+
+        clubNameTv.setText("TEAM AVEON RACING");
+        clubAnnouncementTv.setText("New REcruiment Soon ");
+        clubDp.setImageResource(R.drawable.aveon_logo);
         clubBackground.setImageResource(R.drawable.aveoncar);
+
+
+        viewAllGallery = view.findViewById(R.id.viewAllPhotoBtn);
+        viewAllGallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), ProductDetailsActivity.class);
+                intent.putExtra("gallery_reference" , "aveon" );
+                startActivity(intent);
+            }
+        });
 
         return view;
     }
@@ -87,23 +113,62 @@ public class AveonProfile extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        FirebaseFirestore.getInstance().collection("IMAGES").document("CLUB_GALLERY")
+
+        productImagesList = new ArrayList<>();
+
+        firestore = FirebaseFirestore.getInstance();
+
+
+
+        LinearLayoutManager manager = new LinearLayoutManager(getContext());
+        manager.setOrientation(RecyclerView.HORIZONTAL);
+        photoGalleryRv.setLayoutManager(manager);
+
+
+
+        //end gallary imag set
+
+        FirebaseFirestore.getInstance().collection("CLUB_PROFILE").document(
+                "AVEON")
                 .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful())
-                {
-                  DocumentSnapshot shot = task.getResult();
-
-                  aveonGallaryList = (String) shot.get("aveon_car");
-
+                {    DocumentSnapshot shot = task.getResult();
+                    if (shot.exists()) {
+                        Log.d(TAG, "DocumentSnapshot data: " + shot.getData());
 
 
+                        productImagesList = (List<String>) shot.get("aveon");
+
+                        president = (String)shot.get("CAPTAIN");
+                        jointPresident = (String)shot.get("SECOND VICE CAPTAIN");
+                        vicePresident = (String)shot.get("VICE CAPTAIN");
+                        clubAbout = (String)shot.get("ABOUT");
+                        //setting the data
+
+                        presidentTv.setText(president);
+                        vicePresidentTv.setText(vicePresident);
+                        jointPresidentTv.setText(jointPresident);
+                        clubAboutTv.setText(clubAbout);
+
+
+                        HorizontalSliderAdapter homePageAdapter = new HorizontalSliderAdapter(productImagesList);
+                        photoGalleryRv.setAdapter(homePageAdapter);
+                        homePageAdapter.notifyDataSetChanged();
+
+
+                    }
+
+
+
+                    else {
+                        Log.d(TAG, "No such document");
+                    }
+                } else {
+                    Log.d(TAG, "get failed with ", task.getException());
                 }
-                else
-                {
-                    Toast.makeText(getContext(), ""+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                }
+
             }
         });
 
@@ -111,25 +176,8 @@ public class AveonProfile extends Fragment {
 
 
 
-        horizontalList = new ArrayList<>();
 
 
-
-//
-//        horizontalList.add(new HorizontalItemModel(R.drawable.sign_up));
-//        horizontalList.add(new HorizontalItemModel(R.drawable.splash_logo));
-//        horizontalList.add(new HorizontalItemModel(R.drawable.forgot_pass_image));
-//        horizontalList.add(new HorizontalItemModel(R.drawable.app_icon));
-//        horizontalList.add(new HorizontalItemModel(R.drawable.edc_logo));
-
-//        HorizontalProductAdaptor adapter = new HorizontalProductAdaptor(aveonGallaryList);
-//
-//        LinearLayoutManager manager = new LinearLayoutManager(getContext());
-//        manager.setOrientation(RecyclerView.HORIZONTAL);
-//        photoGalleryRv.setLayoutManager(manager);
-//
-//        photoGalleryRv.setAdapter(adapter);
-//        adapter.notifyDataSetChanged();
 
 
     }

@@ -6,9 +6,12 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +23,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
+
+import java.util.Objects;
 
 public class GoogleMapsInSarvasva extends AppCompatActivity {
 
@@ -33,9 +38,15 @@ public class GoogleMapsInSarvasva extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google_maps_in_sarvasva);
 
+        String title = "MAP";
+        Objects.requireNonNull(getSupportActionBar()).setTitle(title);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary)));
+
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.maps);
-        String title =  "MAPS";
-        //getActionBar().getTitle(title);
+
+
         client = LocationServices.getFusedLocationProviderClient(this);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
                 &&  ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
@@ -90,4 +101,25 @@ public class GoogleMapsInSarvasva extends AppCompatActivity {
 
         });
     }
+
+
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this , MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home)
+        {
+            Intent intent = new Intent(this , MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }
