@@ -42,15 +42,31 @@
         <entry key="..\:/Android Development/sarvasva3/app/src/main/res/layout/fragment_sign_up.xml" value="0.264" />
         <entry key="..\:/Android Development/sarvasva3/app/src/main/res/menu/main_drawer_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Android Development/sarvasva3/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2703125" />
+        <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.12890625" />
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout-w1240dp/fragment_viewall.xml" value="0.152734375" />
+
+
+        <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout-w936dp/activity_login.xml" value="0.187890625" />
+        <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout-w936dp/horizontal_slider_layout.xml" value="0.187890625" />
+        <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/activity_authentication.xml" value="0.25052083333333336" />
+        <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/activity_google_maps_in_sarvasva.xml" value="0.25052083333333336" />
+        <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/activity_login.xml" value="0.25052083333333336" />
+
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/activity_main.xml" value="0.2388888888888889" />
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/activity_splash.xml" value="0.2212962962962963" />
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/activity_view_all.xml" value="0.25052083333333336" />
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/activity_web_viiew_erp.xml" value="0.2388888888888889" />
+
+
+        <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/content_authentication.xml" value="0.25052083333333336" />
+        <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/content_splash.xml" value="0.25052083333333336" />
+        <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/fragment_aboutus.xml" value="0.25052083333333336" />
+        <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/fragment_account_and_purchase.xml" value="0.25052083333333336" />
+
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/fragment_club_profile.xml" value="0.25052083333333336" />
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/fragment_colledge_directory_page.xml" value="0.2388888888888889" />
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/fragment_examination_page.xml" value="0.25052083333333336" />
-        <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/fragment_h_o_d.xml" value="0.25052083333333336" />
+
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/fragment_user_profile.xml" value="0.25052083333333336" />
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/fragment_viewall.xml" value="0.25052083333333336" />
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/item_image.xml" value="0.25052083333333336" />
@@ -58,6 +74,7 @@
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/list_slidermenu.xml" value="0.25052083333333336" />
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/view_all_image_layout.xml" value="0.25052083333333336" />
         <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/layout/viewall_grid.xml" value="0.25052083333333336" />
+        <entry key="..\:/Games/Courses/App Projects/Sarvasva1.1/app/src/main/res/menu/main_drawer_menu.xml" value="0.25052083333333336" />
         <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/font/custom_font.xml" value="0.28072916666666664" />
         <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/layout/activity_main.xml" value="0.24666666666666667" />
         <entry key="..\:/Games/Courses/App Projects/sarvasva_java/app/src/main/res/layout/activity_splash.xml" value="0.25052083333333336" />

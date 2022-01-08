@@ -1,8 +1,11 @@
 package com.example.sarvasva.app.fragments;
 
+
 import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
+=======
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,7 +13,6 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
@@ -20,6 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,8 +36,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+=======
+import android.widget.ImageView;
 
-import java.util.ArrayList;
+import com.example.sarvasva.R;
+import com.example.sarvasva.app.Classes.HorizontalItemModel;
+r
+
 import java.util.List;
 import java.util.Timer;
 
@@ -58,6 +66,7 @@ public class ClubsProfile extends Fragment {
 
 
     FragmentTransaction fragmentTransaction;
+    ImageView Settings;
 
     public ClubsProfile() {
         // Required empty public constructor
@@ -77,6 +86,13 @@ public class ClubsProfile extends Fragment {
         CardView card = view.findViewById(R.id.edc_vicepresident2);
         card.setVisibility(View.INVISIBLE);
         viewAllGallery = view.findViewById(R.id.viewAllPhotoBtn);
+        Settings = view.findViewById(R.id.club_settings);
+        Settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeFragment(new president_edit());
+            }
+        });
         viewAllGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
