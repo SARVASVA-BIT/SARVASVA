@@ -32,6 +32,7 @@ import com.example.sarvasva.app.fragments.UserProfile;
 import com.example.sarvasva.app.fragments.Announcements;
 import com.example.sarvasva.app.fragments.WebVliewERP;
 import com.example.sarvasva.app.fragments.aboutus;
+import com.example.sarvasva.app.fragments.schedule_directory;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
@@ -168,6 +169,10 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent1 = new Intent(MainActivity.this , GoogleMapsInSarvasva.class);
                         startActivity(intent1);
                         finish();
+                        break;
+
+                    case R.id.nav_SCHEDULES:
+                        goToFragment(new schedule_directory(), "SCHEDULE");
                         break;
 
                     case R.id.nav_ERP:
