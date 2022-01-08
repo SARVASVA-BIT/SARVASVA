@@ -2,8 +2,10 @@ package com.example.sarvasva.app.fragments;
 
 import static android.content.ContentValues.TAG;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -19,6 +21,7 @@ import android.widget.TextView;
 
 import com.example.sarvasva.R;
 import com.example.sarvasva.app.Classes.HorizontalSliderAdapter;
+import com.example.sarvasva.app.activities.MainActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -55,6 +58,18 @@ public class UserProfile extends Fragment {
         userRollTv = view.findViewById(R.id.user_roll);
         userPhnTv = view.findViewById(R.id.user_phn);
         userMailTv = view.findViewById(R.id.user_mail);
+
+        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+            @Override
+        public void handleOnBackPressed() {
+            // Handle the back button event
+            Intent intent = new Intent(getContext() , MainActivity.class);
+            startActivity(intent);
+            getActivity().finish();
+
+        }
+    };
+    requireActivity().getOnBackPressedDispatcher().addCallback(getActivity(), callback);
 
 
 
