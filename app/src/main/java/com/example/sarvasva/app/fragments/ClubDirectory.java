@@ -61,6 +61,7 @@ public class ClubDirectory extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_club_directory, container, false);
 
 
+
         Card = (CardView) view.findViewById(R.id.edc);
         Card.setOnClickListener(new View.OnClickListener() {
             @Override

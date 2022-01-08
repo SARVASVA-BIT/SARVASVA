@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
@@ -15,8 +17,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.sarvasva.R;
+import com.example.sarvasva.app.activities.MainActivity;
 
 public class aboutus extends Fragment {
+
+    FragmentTransaction fragmentTransaction;
+
+
+    private void changeFragment(Fragment fragment) {
+        fragmentTransaction = getParentFragmentManager().beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.fui_slide_in_right,R.anim.fui_slide_out_left);
+        fragmentTransaction.replace(R.id.main_activity_frame_layout, fragment);
+        fragmentTransaction.addToBackStack(null).commit();
+    }
 
     TextView rsmail;
     TextView srmail;
@@ -38,6 +51,19 @@ public class aboutus extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_aboutus, container, false);
+
+        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+            @Override
+            public void handleOnBackPressed() {
+                // Handle the back button event
+                Intent intent = new Intent(getContext() , MainActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        };
+            requireActivity().getOnBackPressedDispatcher().addCallback(getActivity(), callback);
+
+
         rsmail = (TextView) view.findViewById(R.id.rs_mail);
         srmail = (TextView) view.findViewById(R.id.sr_mail);
         aumail = (TextView) view.findViewById(R.id.au_mail);
