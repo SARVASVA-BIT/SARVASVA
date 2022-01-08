@@ -3,6 +3,7 @@ package com.example.sarvasva.app.fragments.clubProfiles;
 import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.activity.OnBackPressedCallback;
@@ -61,6 +62,8 @@ public class AveonProfile extends Fragment {
     private TextView clubNameTv ,clubAnnouncementTv , firstHeadTv, secondHeadTv, thirdHeadTv, fourthHeadTv,clubAboutTv , presidentTv , jointPresidentTv, vicePresidentTv, extraPresidentTv ;
     private ImageView clubDp , clubBackground;
 
+    private ImageView link1Iv,link2Iv , link3Iv , link4Iv;
+    private String  link1 , link2, link3 , link4;
 
     public AveonProfile() {
         // Required empty public constructor
@@ -84,6 +87,14 @@ public class AveonProfile extends Fragment {
 
         CardView card = view.findViewById(R.id.edc_vicepresident2);
         card.setVisibility(View.INVISIBLE);
+
+
+        link1Iv= view.findViewById(R.id.president_lkdin);
+        link2Iv= view.findViewById(R.id.jointpresident_lkdin);
+        link3Iv= view.findViewById(R.id.vicepresident_lkdin);
+
+        link4Iv= view.findViewById(R.id.extrapresident_lkdin);
+
 
 
         photoGalleryRv = view.findViewById(R.id.horizontalScrollRecycleView);
@@ -165,6 +176,39 @@ public class AveonProfile extends Fragment {
                         jointPresident = (String)shot.get("SECOND VICE CAPTAIN");
                         vicePresident = (String)shot.get("VICE CAPTAIN");
                         clubAbout = (String)shot.get("ABOUT");
+
+                        link1 =  (String)shot.get("LINK1");
+                        link2 =  (String)shot.get("LINK2");
+                        link3 =  (String)shot.get("LINK3");
+                        link4 =  (String)shot.get("LINK4");
+                        //setting the data
+                        link1Iv.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl(link1);
+                            }
+                        });
+                        link2Iv.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl(link2);
+                            }
+                        });
+                        link3Iv.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl(link3);
+                            }
+                        });
+                        link4Iv.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl(link4);
+                            }
+                        });
+
+
+
                         //setting the data
 
                         presidentTv.setText(president);
@@ -200,5 +244,10 @@ public class AveonProfile extends Fragment {
 
 
 
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

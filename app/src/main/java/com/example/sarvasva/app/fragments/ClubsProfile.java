@@ -5,6 +5,7 @@ import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
 
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.activity.OnBackPressedCallback;
@@ -49,6 +50,15 @@ import java.util.Timer;
 
 public class ClubsProfile extends Fragment {
 
+
+    private ImageView link1Iv,link2Iv , link3Iv , link4Iv;
+    private String  link1 , link2, link3 , link4;
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
+    }
+
+
     private FrameLayout parentFrameLayout;
     private RecyclerView photoGalleryRv;
     private Button viewAllGallery;
@@ -86,6 +96,12 @@ public class ClubsProfile extends Fragment {
         vicePresidentTv = view.findViewById(R.id.club_vice_president);
         extraPresidentTv = view.findViewById(R.id.club_extra_vice_president);
 
+
+        link1Iv= view.findViewById(R.id.president_lkdin);
+        link2Iv= view.findViewById(R.id.jointpresident_lkdin);
+        link3Iv= view.findViewById(R.id.vicepresident_lkdin);
+
+        link4Iv= view.findViewById(R.id.extrapresident_lkdin);
 
         viewAllGallery = view.findViewById(R.id.viewAllPhotoBtn);
 
@@ -156,6 +172,39 @@ public class ClubsProfile extends Fragment {
                         extraPresident = (String)shot.get("SECOND VICE PRESIDENT");
 
                         //setting the data
+
+
+                        link1 =  (String)shot.get("LINK1");
+                        link2 =  (String)shot.get("LINK2");
+                        link3 =  (String)shot.get("LINK3");
+                        link4 =  (String)shot.get("LINK4");
+                        //setting the data
+                        link1Iv.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl(link1);
+                            }
+                        });
+                        link2Iv.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl(link2);
+                            }
+                        });
+                        link3Iv.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl(link3);
+                            }
+                        });
+                        link4Iv.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                gotoUrl(link4);
+                            }
+                        });
+
+
 
                         presidentTv.setText(president);
                         vicePresidentTv.setText(vicePresident);

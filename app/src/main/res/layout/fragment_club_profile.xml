@@ -260,15 +260,12 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/edc_general_info"
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:card_view="http://schemas.android.com/tools"
                 app:cardCornerRadius="15dp"
                 app:cardElevation="10dp"
                 app:cardUseCompatPadding="true"
-                card_view:cardCornerRAdius="5dp">
+                tools:cardCornerRAdius="5dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -302,11 +299,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        xmlns:card_view="http://schemas.android.com/tools"
+                        xmlns:tools="http://schemas.android.com/tools"
                         app:cardCornerRadius="15dp"
                         app:cardElevation="10dp"
                         app:cardUseCompatPadding="true"
-                        card_view:cardCornerRAdius="5dp">
+                        tools:cardCornerRAdius="5dp">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -352,7 +349,7 @@
                                     android:textStyle="bold"/>
 
                                 <ImageView
-                                    android:id="@+id/edc_president_lkdin"
+                                    android:id="@+id/president_lkdin"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:src="@drawable/linkedin"
@@ -370,11 +367,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        xmlns:card_view="http://schemas.android.com/tools"
+                        xmlns:tools="http://schemas.android.com/tools"
                         app:cardCornerRadius="15dp"
                         app:cardElevation="10dp"
                         app:cardUseCompatPadding="true"
-                        card_view:cardCornerRAdius="5dp">
+                        tools:cardCornerRAdius="5dp">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -419,6 +416,7 @@
                                     android:textStyle="bold"/>
 
                                 <ImageView
+                                    android:id="@+id/jointpresident_lkdin"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:src="@drawable/linkedin"
@@ -436,11 +434,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        xmlns:card_view="http://schemas.android.com/tools"
+                        xmlns:tools="http://schemas.android.com/tools"
                         app:cardCornerRadius="15dp"
                         app:cardElevation="10dp"
                         app:cardUseCompatPadding="true"
-                        card_view:cardCornerRAdius="5dp">
+                        tools:cardCornerRAdius="5dp">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -485,6 +483,7 @@
                                     android:textStyle="bold"/>
 
                                 <ImageView
+                                    android:id="@+id/vicepresident_lkdin"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:src="@drawable/linkedin"
@@ -498,15 +497,12 @@
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
                     android:id="@+id/edc_vicepresident2"
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:layout_width="match_parent"
+                        android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    xmlns:card_view="http://schemas.android.com/tools"
-                    app:cardCornerRadius="15dp"
+                        app:cardCornerRadius="15dp"
                     app:cardElevation="10dp"
                     app:cardUseCompatPadding="true"
-                    card_view:cardCornerRAdius="5dp">
+                    tools:cardCornerRAdius="5dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -551,10 +547,11 @@
                                 android:textStyle="bold"/>
 
                             <ImageView
-                                android:layout_width="20dp"
+                                android:id="@+id/extrapresident_lkdin"
+                                android:layout_width="13dp"
                                 android:layout_height="20dp"
-                                android:src="@drawable/linkedin"
-                                android:layout_margin="8dp"/>
+                                android:layout_margin="8dp"
+                                android:src="@drawable/linkedin" />
 
 
                         </LinearLayout>
