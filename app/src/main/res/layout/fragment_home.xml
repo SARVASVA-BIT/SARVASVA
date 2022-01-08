@@ -7,33 +7,48 @@
     tools:context=".app.fragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        android:background="@color/teal_200">
 
-        <ImageView
-            android:id="@+id/homeIv"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
-            android:src="@drawable/splash_logo"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hello_blank_fragment"
-            app:layout_constraintTop_toBottomOf="@id/homeIv"
-            app:layout_constraintStart_toStartOf="@id/homeIv"
-            app:layout_constraintEnd_toEndOf="@id/homeIv"/>
+            android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/homeIv"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/college" />
 
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Greetings BIT!"
+                android:textSize="32dp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:letterSpacing="0.09"
+                android:textColor="@color/teal_900"
+                android:fontFamily="@font/nanum_extrabold"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_content"
+                android:textColor="@color/teal_900"
+                android:layout_margin="16dp"
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </FrameLayout>
