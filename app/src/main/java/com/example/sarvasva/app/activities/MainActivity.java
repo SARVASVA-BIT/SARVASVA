@@ -21,6 +21,7 @@ import android.widget.ExpandableListView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.sarvasva.R;
 import com.example.sarvasva.app.fragments.ClubDirectory;
@@ -159,9 +160,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.nav_MAPS:
-                            Intent intent1 = new Intent(MainActivity.this , GoogleMapsInSarvasva.class);
-                            startActivity(intent1);
-                            finish();
+                        Toast.makeText(MainActivity.this, "Map button is working" , Toast.LENGTH_SHORT).show();
+                        Intent intent1 = new Intent(MainActivity.this , GoogleMapsInSarvasva.class);
+                        startActivity(intent1);
+                        finish();
                         break;
 
                     case R.id.nav_ERP:
