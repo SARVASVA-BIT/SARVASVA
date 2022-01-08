@@ -1,4 +1,6 @@
 package com.example.sarvasva.app.activities;
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,8 +29,12 @@ import com.example.sarvasva.app.fragments.UserProfile;
 
 import com.example.sarvasva.app.fragments.Announcements;
 import com.example.sarvasva.app.fragments.aboutus;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 //import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,8 +43,11 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private View navHeader;
-    private TextView currentUser , clubsTv , titleTvMain;
+    private TextView currentUserTv , clubsTv , titleTvMain;
     private ImageView userProfilePicture;
+    private String currentUser;
+    private FirebaseFirestore firestore;
+    private FirebaseAuth fireBaseAuth;
     private DrawerLayout drawer;
     private ExpandableListView drawerList;
     private CheckBox checkBox;
@@ -67,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         navHeader = navigationView.getHeaderView(0);
-        currentUser = (TextView) navHeader.findViewById(R.id.currentUser);
+        currentUserTv = (TextView) navHeader.findViewById(R.id.currentUser);
         userProfilePicture = (ImageView) navHeader.findViewById(R.id.user_profile_icon);
 
 
@@ -99,7 +109,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-          currentUser.setOnClickListener(new View.OnClickListener() {
+
+
+          currentUserTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Todo : change activity to user profile
@@ -123,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
           //ammouncement , also the home page
 
 
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+          navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 Fragment fragment = null;
@@ -131,15 +143,41 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
 
-                        goToFragment(new Announcements() , "Announcement");
+                        goToFragment(new Announcements() , "ANNOUNCEMENT");
 
                         break;
+
                     case R.id.nav_clubs:
                         goToFragment(new ClubDirectory() , "CLUBS");
                         break;
+
+                    case R.id.nav_SYLLABUS:
+
+                        Intent intent3 = new Intent(MainActivity.this , SyallabusActivity.class);
+                        startActivity(intent3);
+                        finish();
+                        break;
+
+                    case R.id.nav_MAPS:
+                            Intent intent1 = new Intent(MainActivity.this , GoogleMapsInSarvasva.class);
+                            startActivity(intent1);
+                            finish();
+                        break;
+
+                    case R.id.nav_ERP:
+                        Intent intent2 = new Intent(MainActivity.this , WebVIiewERP.class);
+                        startActivity(intent2);
+                        finish();
+                        break;
+
                     case R.id.nav_DIRECTORY:
                         goToFragment(new Colledge_directory_page() , "CAMPUS DIRECTORY");
                         break;
+
+                    case R.id.nav_AboutUs:
+                        setFragment(new aboutus());
+                        break;
+
                     case R.id.nav_Logout:
 
                         FirebaseAuth.getInstance().signOut();
@@ -150,20 +188,6 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                         break;
-                    case R.id.nav_MAPS:
-                        Intent intent1 = new Intent(MainActivity.this , GoogleMapsInSarvasva.class);
-                        startActivity(intent1);
-                        finish();
-                        break;
-                    case R.id.nav_ERP:
-                        Intent intent2 = new Intent(MainActivity.this , WebVIiewERP.class);
-                        startActivity(intent2);
-                        finish();
-                        break;
-                    case R.id.nav_AboutUs:
-                        setFragment(new aboutus());
-                        break;
-
                     default:
                         fragmentClass = Announcements.class;
                 }
@@ -185,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 
 
@@ -201,7 +226,47 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        firestore = FirebaseFirestore.getInstance();
+        fireBaseAuth = FirebaseAuth.getInstance();
 
+
+        firestore.collection("USERS").document(fireBaseAuth.getUid())
+                .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+
+                if (task.isSuccessful())
+                {    DocumentSnapshot shot = task.getResult();
+                    if (shot.exists()) {
+                        Log.d(TAG, "DocumentSnapshot data: " + shot.getData());
+
+
+
+
+                        currentUser = (String)shot.get("full name");
+
+                        //setting the data
+
+                        currentUserTv.setText(currentUser);
+
+
+
+
+
+
+                    }
+
+
+
+                    else {
+                        Log.d(TAG, "No such document");
+                    }
+                } else {
+                    Log.d(TAG, "get failed with ", task.getException());
+                }
+
+            }
+        });
 
     }
 
@@ -235,86 +300,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-//    private void prepareListData() {
-//
-//        listDataHeader = new ArrayList<String>();
-//        listDataChild = new HashMap<String, List<String>>();
-////list of array for header data
-//        String[] array = getResources()
-//                .getStringArray(R.array.nav_drawer_items);
-//        listDataHeader = Arrays.asList(array);
-//
-//        // Adding child data
-//        // dash board
-//        //list for each child as array values
-//        List<String> dashboard = new ArrayList<String>();
-//        String[] dash = getResources().getStringArray(R.array.dash_board);
-//        dashboard = Arrays.asList(dash);
-//
-//        // before you file
-//        List<String> beforeyoufile = new ArrayList<String>();
-//        String[] beforeyou = getResources().getStringArray(
-//                R.array.before_you_file);
-//        beforeyoufile = Arrays.asList(beforeyou);
-//
-//        // profile
-//        List<String> profile = new ArrayList<String>();
-//        String[] myprofile = getResources().getStringArray(R.array.my_profile);
-//        profile = Arrays.asList(myprofile);
-//
-//        // income slip
-//        List<String> income = new ArrayList<String>();
-//        String[] incomeslip = getResources()
-//                .getStringArray(R.array.income_slip);
-//        income = Arrays.asList(incomeslip);
-//
-//        // federal deduction
-//        List<String> federaldeduction = new ArrayList<String>();
-//        String[] federal = getResources().getStringArray(
-//                R.array.federal_deduction);
-//        federaldeduction = Arrays.asList(federal);
-//
-//        // provincial credits
-//        List<String> provincialcredits = new ArrayList<String>();
-//        String[] provincial = getResources().getStringArray(
-//                R.array.provincial_credit);
-//        provincialcredits = Arrays.asList(provincial);
-//
-//        // expenses
-//        List<String> expenses = new ArrayList<String>();
-//        String[] expen = getResources().getStringArray(R.array.expenses);
-//        expenses = Arrays.asList(expen);
-//
-//        //child array without adding array values, only initalized.
-//        // review
-//        List<String> review = new ArrayList<String>();
-//
-//        // cra profile
-//        List<String> craprofile = new ArrayList<String>();
-//
-//        // submit
-//        List<String> submit = new ArrayList<String>();
-//
-//        // cloud drive
-//        List<String> clouddrive = new ArrayList<String>();
-//
-//        // assigning values to menu and submenu
-//
-//        //initally placing the header data from array of list and
-//        placing child array name for each data header
-//
-//        listDataChild.put(listDataHeader.get(0), dashboard); // Header, Child              // data
-//        listDataChild.put(listDataHeader.get(1), beforeyoufile);
-//        listDataChild.put(listDataHeader.get(2), profile);
-//        listDataChild.put(listDataHeader.get(3), income);
-//        listDataChild.put(listDataHeader.get(4), federaldeduction);
-//        listDataChild.put(listDataHeader.get(5), provincialcredits);
-//        listDataChild.put(listDataHeader.get(6), expenses);
-//        listDataChild.put(listDataHeader.get(7), review);
-//        listDataChild.put(listDataHeader.get(8), craprofile);
-//        listDataChild.put(listDataHeader.get(9), submit);
-//        listDataChild.put(listDataHeader.get(10), clouddrive);
-//
-//    }
+
 
 }

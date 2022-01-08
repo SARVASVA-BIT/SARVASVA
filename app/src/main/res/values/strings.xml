@@ -6,6 +6,108 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="ic_plus">+</string>
     <string name="ic_minus">-</string>
+    <string-array name="Courses">
+        <item>BTECH</item>
+        <item>BCA</item>
+        <item>BBA</item>
+
+        <item>BARCH</item>
+        <item>BPHARMA</item>
+        <item>BHMCT</item>
+
+    </string-array>
+
+    <string-array name="BTECH">
+        <item>CSE</item>
+        <item>ECE</item>
+        <item>IT</item>
+        <item>MECH</item>
+        <item>EEE</item>
+        <item>CHEMICAL</item>
+        <item>PRODUCTION</item>
+        <item>BIOTECH</item>
+    </string-array>
+
+
+    <string-array name="BCA">
+        <item>BCA</item>
+    </string-array>
+
+    <string-array name="BBA">
+        <item>BBA</item>
+    </string-array>
+
+    <string-array name="BARCH">
+        <item>BARCH</item>
+    </string-array>
+
+    <string-array name="BPHARMA">
+        <item>BPHARMA</item>
+    </string-array>
+
+    <string-array name="BHMCT">
+        <item>BHMCT</item>
+    </string-array>
+
+
+    <string-array name="Foursem">
+        <item>SEM1</item>
+        <item>SEM2</item>
+        <item>SEM3</item>
+        <item>SEM4</item>
+
+
+    </string-array>
+
+
+    <string-array name="sixsem">
+        <item>SEM1</item>
+        <item>SEM2</item>
+        <item>SEM3</item>
+        <item>SEM4</item>
+        <item>SEM5</item>
+        <item>SEM6</item>
+
+    </string-array>
+
+    <string-array name="Eightsem">
+        <item>SEM1</item>
+        <item>SEM2</item>
+        <item>SEM3</item>
+        <item>SEM4</item>
+        <item>SEM5</item>
+        <item>SEM6</item>
+        <item>SEM7</item>
+        <item>SEM8</item>
+
+    </string-array>
+
+    <string-array name="Tensem">
+        <item>sem1</item>
+        <item>sem2</item>
+        <item>sem3</item>
+        <item>sem4</item>
+        <item>sem5</item>
+        <item>sem6</item>
+        <item>sem7</item>
+        <item>sem8</item>
+        <item>sem9</item>
+        <item>sem10</item>
+
+    </string-array>
+
+
+    <string-array name="CSE">
+        <item>Chemistry</item>
+        <item>BECE</item>
+        <item>IT</item>
+        <item>MECH</item>
+        <item>EEE</item>
+        <item>CHEMICAL</item>
+        <item>PRODUCTION</item>
+        <item>BIOTECH</item>
+    </string-array>
+
 
     <string name="next">Next</string>
     <string name="previous">Previous</string>
@@ -129,4 +231,7 @@
             We, at Entrepreneurship Development Cell, are dedicated to fostering the culture of innovation-led startups and entrepreneurial mindset amongst students of our esteemed institution. We are a body of budding individuals, with interests in the financial and business world along with an aim to bridge the gap between innovations and opportunities and bring together seasoned entrepreneurs and students on a single stage in today’s labyrinth of evolving technology and business.
         </string>
     <string name="title_activity_maps_inactivity">Maps_inactivity</string>
+    <string name="title_activity_syallabus">syallabus</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>

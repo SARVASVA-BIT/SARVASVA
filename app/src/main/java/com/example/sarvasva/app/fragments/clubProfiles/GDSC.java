@@ -1,74 +1,58 @@
-package com.example.sarvasva.app.fragments;
-
+package com.example.sarvasva.app.fragments.clubProfiles;
 
 import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
-=======
-
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
-
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sarvasva.R;
-
 import com.example.sarvasva.app.Classes.HorizontalSliderAdapter;
-import com.example.sarvasva.app.Classes.ProductImagesAdaptor;
-import com.example.sarvasva.app.activities.MainActivity;
 import com.example.sarvasva.app.activities.ProductDetailsActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-=======
-import android.widget.ImageView;
 
-import com.example.sarvasva.R;
-import com.example.sarvasva.app.Classes.HorizontalItemModel;
-r
-
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
 
-public class ClubsProfile extends Fragment {
+public class GDSC extends Fragment {
 
     private FrameLayout parentFrameLayout;
+
+    public String aveonGallaryList ;
     private RecyclerView photoGalleryRv;
     private Button viewAllGallery;
-    private TextView presidentTv , jointPresidentTv, vicePresidentTv, extraPresidentTv , firstHeadTv, secondHeadTv, thirdHeadTv, fourthHeadTv;
-    private String president , jointPresident, vicePresident, extraPresident;
-    private List<String> posterUrlList;
     private List<String> productImagesList = new ArrayList<>();
     private FirebaseFirestore firestore;
-    private ViewPager pager;
-    private ViewPager posterViewPager;
-    private List<String> arrangeList;
-    private int currentPage;
-    private Timer timer ;
-    final static  int DELAY_TIME =2000, PERIOD_TIME =2000;
 
 
 
-    FragmentTransaction fragmentTransaction;
-    ImageView Settings;
+    private String president , jointPresident, vicePresident , extraVicePresident ,
+            clubAbout, firstHead, secondHead, thirdHead, fourthHead;
 
-    public ClubsProfile() {
+
+
+    private TextView clubNameTv ,clubAnnouncementTv , firstHeadTv, secondHeadTv, thirdHeadTv, fourthHeadTv,
+            clubAboutTv , presidentTv , jointPresidentTv, vicePresidentTv, extraPresidentTv ;
+    private ImageView clubDp , clubBackground;
+
+
+    public GDSC() {
         // Required empty public constructor
     }
 
@@ -78,40 +62,66 @@ public class ClubsProfile extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_club_profile, container, false);
 
+
         photoGalleryRv = view.findViewById(R.id.horizontalScrollRecycleView);
+        viewAllGallery = view.findViewById(R.id.viewAllPhotoBtn);
+        clubDp = view.findViewById(R.id.club_dp);
+        clubAnnouncementTv = view.findViewById(R.id.club_announcements);
+        clubAboutTv = view.findViewById(R.id.club_about);
+        clubNameTv = view.findViewById(R.id.club_name);
+        clubBackground = view.findViewById(R.id.club_cover);
+
+
+        firstHeadTv = view.findViewById(R.id.firstheadTV);
+        secondHeadTv = view.findViewById(R.id.secondHeadTv);
+        thirdHeadTv = view.findViewById(R.id.thirdHeadTv);
+        fourthHeadTv = view.findViewById(R.id.fourthHeadTv);
         jointPresidentTv = view.findViewById(R.id.club_joint_president);
         presidentTv = view.findViewById(R.id.club_president);
         vicePresidentTv = view.findViewById(R.id.club_vice_president);
+        extraPresidentTv = view.findViewById(R.id.club_extra_vice_president);
 
-        CardView card = view.findViewById(R.id.edc_vicepresident2);
-        card.setVisibility(View.INVISIBLE);
+
+
+
+        firstHeadTv.setText("GDSC Lead");
+        secondHeadTv.setText("Technical Lead");
+        thirdHeadTv.setText("Management Lead");
+        fourthHeadTv.setText("Girls Tech Lead");
+
+        clubNameTv.setText("GDSC");
+        clubAnnouncementTv.setText("New REcruiment Soon ");
+        clubDp.setImageResource(R.drawable.gdsc);
+
+
+
+        LinearLayoutManager manager = new LinearLayoutManager(getContext());
+        manager.setOrientation(RecyclerView.HORIZONTAL);
+        photoGalleryRv.setLayoutManager(manager);
+
+
         viewAllGallery = view.findViewById(R.id.viewAllPhotoBtn);
-        Settings = view.findViewById(R.id.club_settings);
-        Settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                changeFragment(new president_edit());
-            }
-        });
         viewAllGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ProductDetailsActivity.class);
-                intent.putExtra("gallery_reference" , "edc" );
+                intent.putExtra("gallery_reference" , "gdsc" );
                 startActivity(intent);
             }
         });
+
         return view;
     }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         productImagesList = new ArrayList<>();
 
         firestore = FirebaseFirestore.getInstance();
 
-        //gallary image set
+
 
         LinearLayoutManager manager = new LinearLayoutManager(getContext());
         manager.setOrientation(RecyclerView.HORIZONTAL);
@@ -122,7 +132,7 @@ public class ClubsProfile extends Fragment {
         //end gallary imag set
 
         FirebaseFirestore.getInstance().collection("CLUB_PROFILE").document(
-                "EDC")
+                "GDSC")
                 .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -132,32 +142,32 @@ public class ClubsProfile extends Fragment {
                         Log.d(TAG, "DocumentSnapshot data: " + shot.getData());
 
 
-                        productImagesList = (List<String>) shot.get("edc");
-                        president = (String)shot.get("PRESIDENT");
-                        jointPresident = (String)shot.get("JOINT PRESIDENT");
-                        vicePresident = (String)shot.get("VICE PRESIDENT");
-
+                        productImagesList = (List<String>) shot.get("gdsc");
+                        president = (String)shot.get("GDSC Lead");
+                        jointPresident = (String)shot.get("Technical Lead");
+                        vicePresident = (String)shot.get("Management Lead");
+                        extraVicePresident =  (String)shot.get("Girls Tech Lead");
+                        clubAbout = (String)shot.get("ABOUT");
                         //setting the data
 
                         presidentTv.setText(president);
                         vicePresidentTv.setText(vicePresident);
                         jointPresidentTv.setText(jointPresident);
+                        extraPresidentTv.setText(extraVicePresident);
+                        clubAboutTv.setText(clubAbout);
 
-                        //end setting data
 
-                        //setting adapter
 
                         HorizontalSliderAdapter homePageAdapter = new HorizontalSliderAdapter(productImagesList);
                         photoGalleryRv.setAdapter(homePageAdapter);
                         homePageAdapter.notifyDataSetChanged();
 
-                        //end setting adapter
 
                     }
 
 
 
-                     else {
+                    else {
                         Log.d(TAG, "No such document");
                     }
                 } else {
@@ -175,16 +185,5 @@ public class ClubsProfile extends Fragment {
 
 
 
-
     }
-
-
-    private void changeFragment(Fragment fragment) {
-        fragmentTransaction = getParentFragmentManager().beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.anim.fui_slide_in_right,R.anim.fui_slide_out_left);
-        fragmentTransaction.replace(R.id.main_activity_frame_layout, fragment);
-        fragmentTransaction.addToBackStack(null).commit();
-    }
-
-
 }

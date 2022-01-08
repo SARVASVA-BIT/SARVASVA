@@ -1,5 +1,6 @@
 package com.example.sarvasva.app.activities;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,14 +8,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sarvasva.R;
-import com.example.sarvasva.app.Classes.ViewAllAdaptor;
-import com.example.sarvasva.app.Classes.ViewAllModel;
 
 import java.util.List;
 
 public class ViewAllActivity extends AppCompatActivity {
 
-    public  static List<ViewAllModel> viewAllActivityList;
+
     private RecyclerView recyclerView;
     private  String layoutTitle;
 
@@ -32,15 +31,14 @@ public class ViewAllActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(layoutTitle);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary)));
 
         LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(manager);
 
 
-        ViewAllAdaptor adaptor = new ViewAllAdaptor(viewAllActivityList);
-        recyclerView.setAdapter(adaptor);
-        adaptor.notifyDataSetChanged();
+
 
 
 
