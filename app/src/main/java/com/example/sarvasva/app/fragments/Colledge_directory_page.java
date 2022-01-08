@@ -1,8 +1,10 @@
 package com.example.sarvasva.app.fragments;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -16,6 +18,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.sarvasva.R;
+import com.example.sarvasva.app.activities.AuthenticationActivity;
+import com.example.sarvasva.app.activities.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -74,6 +78,18 @@ public class Colledge_directory_page extends Fragment implements View.OnClickLis
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+            @Override
+            public void handleOnBackPressed() {
+                // Handle the back button event
+                Intent intent = new Intent(getContext() , MainActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        };
+        requireActivity().getOnBackPressedDispatcher().addCallback(getActivity(), callback);
 
 
 

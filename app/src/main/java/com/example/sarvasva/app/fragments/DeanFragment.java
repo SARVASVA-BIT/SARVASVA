@@ -2,7 +2,9 @@ package com.example.sarvasva.app.fragments;
 
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +18,16 @@ import com.example.sarvasva.R;
  * create an instance of this fragment.
  */
 public class DeanFragment extends Fragment {
+
+    FragmentTransaction fragmentTransaction;
+
+
+    private void changeFragment(Fragment fragment) {
+        fragmentTransaction = getParentFragmentManager().beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.fui_slide_in_right,R.anim.fui_slide_out_left);
+        fragmentTransaction.replace(R.id.main_activity_frame_layout, fragment);
+        fragmentTransaction.addToBackStack(null).commit();
+    }
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,6 +57,10 @@ public class DeanFragment extends Fragment {
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
+
+
+
+
         return fragment;
     }
 
@@ -60,7 +76,19 @@ public class DeanFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+            @Override
+            public void handleOnBackPressed() {
+                // Handle the back button event
+                changeFragment(new Colledge_directory_page());
+
+            }
+        };
+        requireActivity().getOnBackPressedDispatcher().addCallback(getActivity(), callback);
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_dean, container, false);
     }
+
 }
