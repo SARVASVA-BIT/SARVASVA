@@ -23,6 +23,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.sarvasva.R;
 import com.example.sarvasva.app.Classes.HorizontalSliderAdapter;
 import com.example.sarvasva.app.activities.ProductDetailsActivity;
+import com.example.sarvasva.app.fragments.president_edit;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;

@@ -95,7 +95,7 @@ private ProgressBar progressBar;
 
                             if (task.isSuccessful()) {
 
-                                Toast.makeText(getContext() , "Email Sent Successfully. Check Span Folder" , Toast.LENGTH_LONG).show();
+                                Toast.makeText(getContext() , "Email Sent Successfully. Check Spam Folder" , Toast.LENGTH_LONG).show();
 
                             } else {
                                 Toast.makeText(getContext() , "Something Went Wrong" +task.getException().getMessage() , Toast.LENGTH_LONG).show();

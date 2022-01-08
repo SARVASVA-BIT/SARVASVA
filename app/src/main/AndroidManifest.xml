@@ -18,15 +18,15 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".app.activities.SyllabusDetailActivity"
+            android:theme="@style/NoActionBarTheme"
             android:exported="false" />
         <activity
             android:name=".app.activities.SyallabusActivity"
+            android:theme="@style/NoActionBarTheme"
             android:exported="false" />
         <activity
             android:name=".app.activities.ProductDetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".app.activities.WebVIiewERP"
+            android:theme="@style/NoActionBarTheme"
             android:exported="false" />
         <activity
             android:name=".app.activities.GoogleMapsInSarvasva"

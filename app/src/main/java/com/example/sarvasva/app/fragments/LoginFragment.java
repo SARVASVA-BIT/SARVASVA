@@ -54,7 +54,7 @@ public class LoginFragment extends Fragment {
 
     private TextView forgotPassTv, signUpTv;
     private FrameLayout parentFrameLayout;
-    private ImageView close;
+//    private ImageView close;
     private EditText emailEt, passEt;
     private FirebaseAuth auth ;
     GoogleSignInClient mGoogleSignInClient;
@@ -79,7 +79,7 @@ public class LoginFragment extends Fragment {
 
         forgotPassTv = view.findViewById(R.id.forgetPass);
         signUpTv = view.findViewById(R.id.signUpBtn);
-        close = view.findViewById(R.id.closeBtn);
+//        close = view.findViewById(R.id.closeBtn);
         emailEt = view.findViewById(R.id.emailEt);
         passEt = view.findViewById(R.id.passwordEt);
         loginBtn = view.findViewById(R.id.loginBtn);
@@ -196,17 +196,17 @@ public class LoginFragment extends Fragment {
 
             }
         });
-        close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-
-                Intent intent = new Intent(getContext(), MainActivity.class);
-                startActivity(intent);
-                getActivity().finish();
-
-            }
-        });
+//        close.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v)
+//            {
+//
+//                Intent intent = new Intent(getContext(), MainActivity.class);
+//                startActivity(intent);
+//                getActivity().finish();
+//
+//            }
+//        });
 
 
     }

@@ -1,7 +1,9 @@
 package com.example.sarvasva.app.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -16,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.sarvasva.R;
+import com.example.sarvasva.app.activities.MainActivity;
 import com.example.sarvasva.app.fragments.clubProfiles.ACMProfile;
 import com.example.sarvasva.app.fragments.clubProfiles.AveonProfile;
 import com.example.sarvasva.app.fragments.clubProfiles.EhsaasProfile;
@@ -180,6 +183,18 @@ public class ClubDirectory extends Fragment implements View.OnClickListener {
              }
         });
 
+
+        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+            @Override
+            public void handleOnBackPressed() {
+                // Handle the back button event
+                Intent intent = new Intent(getContext() , MainActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+
+            }
+        };
+        requireActivity().getOnBackPressedDispatcher().addCallback(getActivity(), callback);
 
 
 

@@ -46,10 +46,10 @@ public class SyllabusDetailActivity extends AppCompatActivity {
         referenceBookTv = findViewById(R.id.referenceBookTv);
 
         String title = "SYLLABUS DETAIL";
-        Objects.requireNonNull(getSupportActionBar()).setTitle(title);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary)));
+//        Objects.requireNonNull(getSupportActionBar()).setTitle(title);
+//        getSupportActionBar().setDisplayShowTitleEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary)));
 
 
         firestore.collection("SYALLABUS").document(
@@ -105,13 +105,12 @@ public class SyllabusDetailActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == android.R.id.home)
-        {
 
-            finish();
-        }
-        return super.onOptionsItemSelected(item);
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(SyllabusDetailActivity.this , SyallabusActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
